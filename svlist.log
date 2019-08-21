@@ -1,0 +1,339 @@
+cvar list
+--------------
+sv_accelerate                            : 5        : , "nf", "rep", "cl" : Linear acceleration amount (old value is 5.6)
+sv_accelerate_debug_speed                : 0        : , "nf", "rep", "cl" : 
+sv_accelerate_use_weapon_speed           : 1        : , "nf", "rep", "cl" : 
+sv_air_max_horizontal_parachute_ratio    : 0        : , "rep", "cl"    : 
+sv_air_max_horizontal_parachute_speed    : 240      : , "rep", "cl"    : 
+sv_air_max_wishspeed                     : 30       : , "rep", "cl"    : 
+sv_air_pushaway_dist                     : 0        : , "rep", "cl"    : 
+sv_airaccelerate                         : 12       : , "nf", "rep", "cl" : 
+sv_airaccelerate_parachute               : 2        : , "rep", "cl"    : 
+sv_airaccelerate_rappel                  : 2        : , "rep", "cl"    : 
+sv_allchat                               : 1        : , "sv", "nf"     : Players can receive all other players' text chat, team restrictions apply
+sv_allow_legacy_cmd_execution_from_client : 0        :                  : Enables old concommand execution behavior allowing remote clients to run any command not explicitly flagged as disallowed.
+sv_allow_thirdperson                     : 0        : , "rep", "cl"    : Allows the server set players in third person mode without the client slamming it back (if cheats are on, all clients can set t
+sv_allow_votes                           : 1        : , "sv"           : Allow voting?
+sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
+sv_allowdownload                         : 1        :                  : Allow clients to download files
+sv_allowupload                           : 0        :                  : Allow clients to upload customizations files
+sv_alltalk                               : 0        : , "nf", "rep", "cl" : Deprecated. Replaced with sv_talk_enemy_dead and sv_talk_enemy_living.
+sv_alternateticks                        : 0        :                  : If set, server only simulates entities on even numbered ticks. 
+sv_arms_race_vote_to_restart_disallowed_after : 0        : , "sv", "rep"    : Arms Race gun level after which vote to restart is disallowed
+sv_auto_adjust_bot_difficulty            : 1        : , "sv"           : Adjust the difficulty of bots each round based on contribution score.
+sv_auto_full_alltalk_during_warmup_half_end : 1        : , "sv"           : When enabled will automatically turn on full all talk mode in warmup, at halftime and at the end of the match
+sv_autobunnyhopping                      : 0        : , "rep", "cl"    : Players automatically re-jump while holding jump button
+sv_autobuyammo                           : 0        : , "sv", "nf", "rep" : Enable automatic ammo purchase when inside buy zones during buy periods
+sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
+sv_bot_buy_decoy_weight                  : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_flash_weight                  : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_grenade_chance                : 33       : , "sv"           : Chance bots will buy a grenade with leftover money (after prim, sec and armor). Input as percent (0-100.0)
+sv_bot_buy_hegrenade_weight              : 6        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_molotov_weight                : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_smoke_weight                  : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bots_force_rebuy_every_round          : 0        : , "sv"           : If set, this strips the bots of their weapons every round and forces them to rebuy.
+sv_bots_get_easier_each_win              : 0        : , "sv"           : If > 0, some # of bots will lower thier difficulty each time they win. The argument defines how many will lower their difficult
+sv_bots_get_harder_after_each_wave       : 0        : , "sv"           : If > 0, some # of bots will raise thier difficulty each time CTs beat a Guardian wave. The argument defines how many will raise
+sv_bounce                                : 0        : , "nf", "rep", "cl" : Bounce multiplier for when physically simulated objects collide with other objects.
+sv_breachcharge_arm_delay                : 0        : , "sv", "cl"     : 
+sv_breachcharge_delay_max                : 0        : , "sv", "cl"     : 
+sv_breachcharge_delay_min                : 0        : , "sv", "cl"     : 
+sv_breachcharge_distance_max             : 1200     : , "sv", "cl"     : 
+sv_breachcharge_distance_min             : 600      : , "sv", "cl"     : 
+sv_breachcharge_fuse_max                 : 1        : , "sv", "cl"     : 
+sv_breachcharge_fuse_min                 : 0        : , "sv", "cl"     : 
+sv_broadcast_ugc_download_progress_interval : 8        : , "sv"           : 
+sv_broadcast_ugc_downloads               : 0        : , "sv"           : 
+sv_bumpmine_arm_delay                    : 0        : , "sv", "cl"     : 
+sv_bumpmine_detonate_delay               : 0        : , "sv", "cl"     : 
+sv_buy_status_override                   : -1       : , "sv", "rep"    : Override for buy status map info. 0 = everyone can buy, 1 = ct only, 2 = t only 3 = nobody
+sv_chat_proximity                        : -1       : , "rep", "cl"    : 
+sv_cheats                                : 1        : , "nf", "rep"    : Allow cheats on server
+sv_clamp_unsafe_velocities               : 1        : , "rep", "cl"    : Whether the server will attempt to clamp velocities that could cause physics bugs or crashes.
+sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
+sv_client_cmdrate_difference             : 0        : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate an
+sv_clockcorrection_msecs                 : 30       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
+sv_coach_comm_unrestricted               : 0        : , "rep", "cl"    : When set, ignores coach communication restrictions.
+sv_coaching_enabled                      : 0        : , "rep", "cl"    : Allows spectating and communicating with a team ( 'coach t' or 'coach ct' )
+sv_competitive_minspec                   : 1        : , "nf", "rep", "cl" : Enable to force certain client convars to minimum/maximum values to help prevent competitive advantages.
+sv_competitive_official_5v5              : 0        : , "nf", "rep", "cl" : Enable to force the server to show 5v5 scoreboards and allows spectators to see characters through walls.
+sv_consistency                           : 0        : , "rep"          : Whether the server enforces file consistency for critical files
+sv_contact                               : 0        : , "nf"           : Contact email for server sysop
+sv_cs_dump_econ_item_stringtable         : cmd      :                  : sv_cs_dump_econ_item_stringtable
+sv_cs_player_speed_has_hostage           : 200      : , "rep", "cl"    : 
+sv_ct_spawn_on_bombsite                  : -1       : , "sv"           : Force cts to spawn on a bombsite
+sv_damage_print_enable                   : 1        : , "sv", "rep"    : Turn this off to disable the player's damage feed in the console after getting killed.
+sv_dc_friends_reqd                       : 0        : , "sv"           : Set this to 0 to allow direct connects to a game in progress even if no presents are present
+sv_deadtalk                              : 0        : , "nf", "rep", "cl" : Dead players can speak (voice, text) to the living
+sv_debug_ugc_downloads                   : 0        : , "sv"           : 
+sv_debugmanualmode                       : 0        :                  : Make sure entities correctly report whether or not their network data has changed.
+sv_disable_immunity_alpha                : 0        : , "rep", "cl"    : If set, clients won't slam the player model render settings each frame for immunity [mod authors use this]
+sv_disable_observer_interpolation        : 0        : , "rep", "cl"    : Disallow interpolating between observer targets on this server.
+sv_disable_pas                           : 1        : , "sv", "cheat", "rep" : 
+sv_disable_radar                         : 0        : , "rep", "cl"    : 
+sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
+sv_drowning_damage_initial               : 2        : , "sv", "rep"    : 
+sv_drowning_damage_max                   : 5        : , "sv", "rep"    : 
+sv_dump_class_info                       : cmd      :                  : Dump server class infos.
+sv_dump_class_table                      : cmd      :                  : Dump server class table matching the pattern (substr).
+sv_dump_serialized_entities_mem          : cmd      :                  : Dump serialized entity allocations stats.
+sv_dumpstringtables                      : 0        : , "cheat"        : 
+sv_duplicate_playernames_ok              : 0        : , "rep"          : When enabled player names won't have the (#) in front of their names its the same as another player.
+sv_dz_autojointeam                       : 1        : , "sv"           : Whether players are automatically assigned a DZ team
+sv_dz_cash_bundle_size                   : 50       : , "sv", "rep"    : Size of a cash bundle
+sv_dz_contractkill_reward                : 10       : , "sv", "rep"    : Cash bundles to award for a successful contract kill
+sv_dz_enable_respawn                     : 1        : , "rep", "cl"    : 
+sv_dz_enable_respawn_solos               : 0        : , "rep", "cl"    : 
+sv_dz_exploration_payment_amount         : 2        : , "sv", "rep"    : Number of cash bundles to award for exploring a new sector
+sv_dz_exploration_payment_amount_bonus   : 2        : , "sv", "rep"    : Number of BONUS cash bundles to award for exploring (if the player has the item/upgrade)
+sv_dz_hostage_rescue_reward              : 18       : , "rep", "cl"    : Number of cash bundles to award for rescuing a hostage
+sv_dz_jointeam_allowed                   : 0        : , "sv"           : Whether non-server admins are allowed to use the dz_jointeam command
+sv_dz_parachute_reuse                    : 1        : , "sv", "rep"    : 
+sv_dz_paradrop                           : cmd      :                  : 
+sv_dz_player_max_health                  : 120      : , "sv"           : 
+sv_dz_player_spawn_armor                 : 0        : , "sv"           : 
+sv_dz_player_spawn_health                : 120      : , "sv"           : 
+sv_dz_reset_danger_zone                  : cmd      :                  : 
+sv_dz_show_enemy_name_scope_range        : 800      : , "sv"           : 
+sv_dz_squad_wipe_reward                  : 2        : , "rep", "cl"    : Number of cash bundles to award for eliminating a squad
+sv_dz_team_count                         : 1        : , "rep", "cl"    : Max players allowed per team
+sv_dz_warmup_tablet                      : 1        : , "sv"           : 
+sv_dz_zone_bombdrop_money_reward         : 15       : , "rep", "cl"    : How many money stacks players are rewarded each danger zone wave
+sv_dz_zone_bombdrop_money_reward_bonus   : 5        : , "rep", "cl"    : How many bonus money stacks players are rewarded each danger zone wave when they have the bonus item
+sv_dz_zone_damage                        : 1        : , "sv", "cheat"  : 
+sv_dz_zone_hex_radius                    : 2200     : , "rep", "cl"    : 
+sv_enable_delta_packing                  : 0        :                  : When enabled, this allows for entity packing to use the property changes for building up the data. This is many times faster, b
+sv_enablebunnyhopping                    : 0        : , "rep", "cl"    : Allow player speed to exceed maximum running speed
+sv_env_entity_makers_enabled             : 1        : , "sv", "rep"    : 
+sv_exojump_jumpbonus_forward             : 0        : , "rep", "cl"    : ExoJump forwards velocity bonus when duck jumping
+sv_exojump_jumpbonus_up                  : 0        : , "rep", "cl"    : ExoJump upwards bonus when holding the jump button
+sv_exostaminajumpcost                    : 0        : , "rep", "cl"    : Stamina penalty for jumping with exo legs
+sv_exostaminalandcost                    : 0        : , "rep", "cl"    : Stamina penalty for landing with exo legs
+sv_extract_ammo_from_dropped_weapons     : 0        : , "rep", "cl"    : 
+sv_falldamage_exojump_multiplier         : 0        : , "rep", "cl"    : ExoJump fall damage multiplier
+sv_falldamage_scale                      : 1        : , "rep", "cl"    : 
+sv_falldamage_to_below_player_multiplier : 1        : , "rep", "cl"    : Scale damage when distributed across two players
+sv_falldamage_to_below_player_ratio      : 0        : , "rep", "cl"    : Landing on a another player's head gives them this ratio of the damage.
+sv_footstep_sound_frequency              : 0        : , "cheat", "rep", "cl" : How frequent to hear the player's step sound or how fast they appear to be running from first person.
+sv_force_reflections                     : 0        : , "rep", "cl"    : 
+sv_force_transmit_ents                   : 0        : , "sv"           : Will transmit all entities to client, regardless of PVS conditions (will still skip based on transmit flags, however).
+sv_force_transmit_players                : 0        : , "sv"           : Will transmit players to all clients regardless of PVS checks.
+sv_forcepreload                          : 1        : , "a"            : Force server side preloading.
+sv_friction                              : 5        : , "nf", "rep", "cl" : World friction.
+sv_full_alltalk                          : 0        : , "rep", "cl"    : Any player (including Spectator team) can speak to any other player
+sv_game_mode_convars                     : cmd      :                  : Display the values of the convars for the current game_mode.
+sv_gameinstructor_disable                : 0        : , "rep", "cl"    : Force all clients to disable their game instructors.
+sv_getinfo                               : cmd      :                  : Show user info of a connected client
+sv_grassburn                             : 0        : , "rep", "cl"    : 
+sv_gravity                               : 800      : , "nf", "rep", "cl" : World gravity.
+sv_grenade_trajectory                    : 0        : , "cheat", "rep", "cl" : Shows grenade trajectory visualization in-game.
+sv_grenade_trajectory_dash               : 0        : , "rep", "cl"    : Dot-dash style grenade trajectory arc
+sv_grenade_trajectory_thickness          : 0        : , "rep", "cl"    : Visible thickness of grenade trajectory arc
+sv_grenade_trajectory_time               : 20       : , "rep", "cl"    : Length of time grenade trajectory remains visible.
+sv_grenade_trajectory_time_spectator     : 4        : , "rep", "cl"    : Length of time grenade trajectory remains visible as a spectator.
+sv_guardian_heavy_all                    : 0        : , "sv"           : 
+sv_guardian_heavy_count                  : 0        : , "sv"           : 
+sv_guardian_max_wave_for_heavy           : 0        : , "sv"           : 
+sv_guardian_min_wave_for_heavy           : 0        : , "sv"           : 
+sv_health_approach_enabled               : 0        : , "sv", "rep"    : 
+sv_health_approach_speed                 : 10       : , "sv", "rep"    : 
+sv_hegrenade_damage_multiplier           : 1        : , "sv", "rep"    : 
+sv_hegrenade_radius_multiplier           : 1        : , "sv", "rep"    : 
+sv_hibernate_ms                          : 20       :                  : # of milliseconds to sleep per frame while hibernating
+sv_hibernate_ms_vgui                     : 20       :                  : # of milliseconds to sleep per frame while hibernating but running the vgui dedicated server frontend
+sv_hibernate_postgame_delay              : 5        :                  : # of seconds to wait after final client leaves before hibernating.
+sv_hibernate_punt_tv_clients             : 0        :                  : When enabled will punt all GOTV clients during hibernation
+sv_hibernate_when_empty                  : 1        :                  : Puts the server into extremely low CPU usage mode when no clients connected
+sv_highlight_distance                    : 500      : , "rep", "cl"    : 
+sv_highlight_duration                    : 3        : , "rep", "cl"    : 
+sv_holiday_mode                          : 0        : , "rep", "cl"    : 0 = OFF, 1 = Halloween, 2 = Winter
+sv_ignoregrenaderadio                    : 0        : , "sv"           : Turn off Fire in the hole messages
+sv_infinite_ammo                         : 0        : , "rep", "cl"    : Player's active weapon will never run out of ammo. If set to 2 then player has infinite total ammo but still has to reload the 
+sv_invites_only_mainmenu                 : 0        : , "rep", "cl"    : If turned on, will ignore all invites when user is playing a match
+sv_jump_impulse                          : 301      : , "rep", "cl"    : Initial upward velocity for player jumps; sqrt(2*gravity*height).
+sv_jump_impulse_exojump_multiplier       : 1        : , "rep", "cl"    : ExoJump impulse multiplier
+sv_kick_ban_duration                     : 15       : , "nf", "rep", "cl" : How long should a kick ban from the server should last (in minutes)
+sv_kick_players_with_cooldown            : 1        : , "sv", "rep"    : (0: do not kick on insecure servers; 1: kick players with Untrusted status or convicted by Overwatch; 2: kick players with any 
+sv_knife_attack_extend_from_player_aabb  : 0        : , "rep", "cl"    : 
+sv_ladder_scale_speed                    : 0        : , "rep", "cl"    : Scale top speed on ladders
+sv_lagcompensateself                     : 0        : , "sv", "cheat"  : Player can lag compensate themselves.
+sv_lagcompensationforcerestore           : 1        : , "sv", "cheat"  : Don't test validity of a lag comp restore, just do it.
+sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
+sv_ledge_mantle_helper                   : 1        : , "rep", "cl"    : 1=Only improves success of jump+ducks to windows or vents (jump+duck to duck), 2=Improves success of all jump+ducks to ledges, 
+sv_ledge_mantle_helper_dzonly            : 0        : , "rep", "cl"    : 1=only does the feature if running in game mode Danger Zone, 0=Doesn't check game mode to run
+sv_load_forced_client_names_file         : cmd      :                  : Loads a file containing SteamID64 names for clients
+sv_load_random_client_names_file         : cmd      :                  : Loads a file containing random name words for clients
+sv_log_http_record_before_any_listeners  : 0        : , "sv"           : 
+sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
+sv_logbans                               : 0        : , "a"            : Log server bans in the server logs.
+sv_logblocks                             : 0        :                  : If true when log when a query is blocked (can cause very large log files)
+sv_logecho                               : 1        : , "a"            : Echo log information to the console.
+sv_logfile                               : 1        : , "a"            : Log server information in the log file.
+sv_logflush                              : 0        : , "a"            : Flush the log file to disk on each write (slow).
+sv_logsdir                               : 0        : , "a"            : Folder in the game directory where server logs will be stored.
+sv_logsecret                             : 0        :                  : If set then include this secret when doing UDP logging (will use 0x53 as packet type, not usual 0x52)
+sv_logsocket                             : 1        :                  : Uses a specific outgoing socket for sv udp logging
+sv_logsocket2                            : 1        :                  : Uses a specific outgoing socket for second source of sv udp logging
+sv_logsocket2_substr                     : 0        :                  : Uses a substring match for second source of sv udp logging
+sv_matchend_drops_enabled                : 1        : , "sv"           : Rewards gameplay time is always accumulated for players, but drops at the end of the match can be prevented
+sv_matchpause_auto_5v5                   : 0        : , "rep", "cl"    : When enabled will automatically pause the match at next freeze time if less than 5 players are connected on each team.
+sv_max_allowed_net_graph                 : 1        : , "nf", "rep", "cl" : Determines max allowed net_graph value for clients.
+sv_max_dropped_packets_to_process        : 10       :                  : Max dropped packets to process. Lower settings prevent lagged players from simulating too far in the past. Setting of 0 disable
+sv_max_queries_sec                       : 10       :                  : Maximum queries per second to respond to from a single IP address.
+sv_max_queries_sec_global                : 500      :                  : Maximum queries per second to respond to from anywhere.
+sv_max_queries_tracked_ips_max           : 50000    :                  : Window over which to average queries per second averages.
+sv_max_queries_tracked_ips_prune         : 10       :                  : Window over which to average queries per second averages.
+sv_max_queries_window                    : 30       :                  : Window over which to average queries per second averages.
+sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
+sv_maxspeed                              : 320      : , "nf", "rep", "cl" : 
+sv_maxunlag                              : 0        : , "sv"           : Maximum lag compensation in seconds
+sv_maxupdaterate                         : 128      : , "rep"          : Maximum updates per second that the server will allow
+sv_maxuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime exceeds this number of hours, the server will exit.
+sv_maxusrcmdprocessticks                 : 16       : , "sv"           : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
+sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv"           : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server 
+sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negat
+sv_maxvelocity                           : 3500     : , "rep", "cl"    : Maximum speed any ballistically moving object is allowed to attain per axis.
+sv_memlimit                              : 0        :                  : If set, whenever a game ends, if the total memory used by the server is greater than this # of megabytes, the server will exit.
+sv_min_jump_landing_sound                : 260      : , "rep", "cl"    : 
+sv_mincmdrate                            : 64       : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
+sv_minrate                               : 16000    : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
+sv_minupdaterate                         : 64       : , "rep"          : Minimum updates per second that the server will allow
+sv_minuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime is less than this number of hours, the server will continue running regardle
+sv_noclipaccelerate                      : 5        : , "a", "nf", "rep", "cl" : 
+sv_noclipduringpause                     : 0        : , "cheat", "rep", "cl" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
+sv_noclipspeed                           : 5        : , "a", "nf", "rep", "cl" : 
+sv_occlude_players                       : 1        : , "sv"           : 
+sv_outofammo_indicator                   : 0        : , "rep", "cl"    : 
+sv_parallel_packentities                 : 1        :                  : 
+sv_parallel_send                         : 0        :                  : Pack and send snapshots in parallel for smoother server tick rate at the expense of spending more CPU.
+sv_parallel_sendsnapshot                 : 1        :                  : 
+sv_party_mode                            : 0        : , "rep", "cl"    : Party!!
+sv_password                              : 0        : , "nf", "prot", "norecord" : Server password for entry into multiplayer games
+sv_pausable                              : 0        :                  : Is the server pausable.
+sv_player_parachute_velocity             : -200     : , "sv", "rep"    : 
+sv_precacheinfo                          : cmd      :                  : Show precache info.
+sv_prime_accounts_only                   : 0        : , "sv"           : When this setting is enabled only prime users can connect to this game server.
+sv_prop_door_open_speed_scale            : 1        : , "sv", "rep"    : 
+sv_pure                                  : cmd      :                  : Show user data.
+sv_pure_checkvpk                         : cmd      :                  : CheckPureServerVPKFiles
+sv_pure_consensus                        : 100000000.000 :                  : Minimum number of file hashes to agree to form a consensus.
+sv_pure_finduserfiles                    : cmd      :                  : ListPureServerFiles
+sv_pure_kick_clients                     : 1        :                  : If set to 1, the server will kick clients with mismatching files. Otherwise, it will issue a warning to the client.
+sv_pure_listfiles                        : cmd      :                  : ListPureServerFiles
+sv_pure_listuserfiles                    : cmd      :                  : ListPureServerFiles
+sv_pure_retiretime                       : 900      :                  : Seconds of server idle time to flush the sv_pure file hash cache.
+sv_pure_trace                            : 0        :                  : If set to 1, the server will print a message whenever a client is verifying a CRC for a file.
+sv_pushaway_hostage_force                : 20000    : , "sv", "cheat", "rep" : How hard the hostage is pushed away from physics objects (falls off with inverse square of distance).
+sv_pushaway_max_hostage_force            : 1000     : , "sv", "cheat", "rep" : Maximum of how hard the hostage is pushed away from physics objects.
+sv_pvsskipanimation                      : 979620864.000 : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
+sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
+sv_quota_stringcmdspersecond             : 40       :                  : How many string commands per second clients are allowed to submit, 0 to disallow all string commands
+sv_rcon_whitelist_address                : 0        :                  : When set, rcon failed authentications will never ban this address, e.g. '127.0.0.1'
+sv_record_item_time_data                 : 0        : , "sv"           : Turn on recording of per player item time data into the server log.
+sv_regeneration_force_on                 : 0        : , "sv", "cheat"  : Cheat to test regenerative health systems
+sv_region                                : -1       :                  : The region of the world to report this server in.
+sv_reliableavatardata                    : 0        : , "rep"          : When enabled player avatars are exchanged via gameserver (0: off, 1: players, 2: server)
+sv_remove_old_ugc_downloads              : 1        : , "sv"           : 
+sv_replaybots                            : 1        :                  : If set to 1, the server records data needed to replay network stream from bot's perspective
+sv_reservation_tickrate_adjustment       : 0        :                  : Adjust server tickrate upon reservation
+sv_reservation_timeout                   : 45       :                  : Time in seconds before lobby reservation expires.
+sv_search_key                            : 0        :                  : When searching for a dedicated server from lobby, restrict search to only dedicated servers having the same sv_search_key.
+sv_search_team_key                       : 0        :                  : When initiating team search, set this key to match with known opponents team
+sv_send_stats                            : cmd      :                  : show stats of running parallel send
+sv_server_graphic1                       : 0        : , "rep", "cl"    : A 360x60 (<16kb) image file in /csgo/ that will be displayed to spectators.
+sv_server_graphic2                       : 0        : , "rep", "cl"    : A 220x45 (<16kb) image file in /csgo/ that will be displayed to spectators.
+sv_server_verify_blood_on_player         : 1        : , "cheat", "rep", "cl" : 
+sv_setsteamaccount                       : cmd      :                  : token Set game server account token to use for logging in to a persistent game server account
+sv_shield_explosive_damage_cap           : 99       : , "rep", "cl"    : 
+sv_shield_explosive_damage_crouch_bonus  : 10       : , "rep", "cl"    : 
+sv_shield_explosive_damage_mindist       : 250      : , "rep", "cl"    : 
+sv_shield_explosive_damage_mult          : 4        : , "rep", "cl"    : 
+sv_shield_explosive_damage_scale         : 0        : , "rep", "cl"    : 
+sv_shield_hitpoints                      : 650      : , "rep", "cl"    : 
+sv_show_cull_props                       : 0        :                  : Print out props that are being culled/added by recipent proxies.
+sv_show_ragdoll_playernames              : 0        : , "rep", "cl"    : 
+sv_show_team_equipment_force_on          : 0        : , "rep", "cl"    : Force on if not prohibited
+sv_show_team_equipment_prohibit          : 0        : , "nf", "rep", "cl" : Determines whether +cl_show_team_equipment is prohibited.
+sv_show_voip_indicator_for_enemies       : 0        : , "sv", "rep"    : Makes it so the voip icon is shown over enemies as well as allies when they are talking
+sv_showbullethits                        : 0        : , "rep", "cl"    : 1=show hits and near misses, 2=show hits only
+sv_showimpacts                           : 0        : , "rep", "cl"    : Shows client (red) and server (blue) bullet impact point (1=both, 2=client-only, 3=server-only)
+sv_showimpacts_penetration               : 0        : , "rep", "cl"    : Shows extra data when bullets penetrate. (use sv_showimpacts_time to increase time shown)
+sv_showimpacts_time                      : 4        : , "rep", "cl"    : Duration bullet impact indicators remain before disappearing
+sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show lag compensated hitboxes whenever a player is lag compensated.
+sv_showlagcompensation_duration          : 4        : , "sv", "cheat"  : Duration to show lag-compensated hitboxes
+sv_showtags                              : cmd      :                  : Describe current gametags.
+sv_shutdown                              : cmd      :                  : Sets the server to shutdown when all games have completed
+sv_skirmish_id                           : 0        : , "rep", "cl"    : Dedicated server skirmish id to run
+sv_skyname                               : 0        : , "a", "rep", "cl" : Current name of the skybox texture
+sv_soundemitter_reload                   : cmd      :                  : Flushes the sounds.txt system
+sv_soundscape_printdebuginfo             : cmd      :                  : print soundscapes
+sv_spawn_afk_bomb_drop_time              : 15       : , "sv", "rep"    : Players that have never moved since they spawned will drop the bomb after this amount of time.
+sv_spawn_rappel_min_duration             : 8        : , "sv", "rep"    : 
+sv_spawn_rappel_min_duration_with_chute  : 2        : , "sv", "rep"    : 
+sv_spec_hear                             : 1        : , "nf", "rep", "cl" : Determines who spectators can hear: 0: only spectators; 1: all players; 2: spectated team; 3: self only; 4: nobody
+sv_spec_post_death_additional_time       : 0        : , "sv", "rep"    : 
+sv_spec_use_tournament_content_standards : 0        : , "rep", "cl"    : 
+sv_specaccelerate                        : 5        : , "a", "nf", "rep", "cl" : 
+sv_specnoclip                            : 1        : , "a", "nf", "rep", "cl" : 
+sv_specspeed                             : 3        : , "a", "nf", "rep", "cl" : 
+sv_staminajumpcost                       : 0        : , "rep", "cl"    : Stamina penalty for jumping
+sv_staminalandcost                       : 0        : , "rep", "cl"    : Stamina penalty for landing
+sv_staminamax                            : 80       : , "rep", "cl"    : Maximum stamina penalty
+sv_staminarecoveryrate                   : 60       : , "rep", "cl"    : Rate at which stamina recovers (units/sec)
+sv_standable_normal                      : 0        : , "rep", "cl"    : 
+sv_steamauth_enforce                     : 2        :                  : By default, player must maintain a reliable connection to Steam servers. When player Steam session drops, enforce it: 2 = insta
+sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam comm
+sv_steamgroup_exclusive                  : 0        :                  : If set, only members of Steam group will be able to join the server when it's empty, public people will be able to join the ser
+sv_stopspeed                             : 80       : , "nf", "rep", "cl" : Minimum stopping speed when on ground.
+sv_stressbots                            : 0        :                  : If set to 1, the server calculates data and fills packets to bots. Used for perf testing.
+sv_tablet_show_path_to_nearest_resq      : 0        : , "rep", "cl"    : 
+sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
+sv_talk_after_dying_time                 : 0        : , "rep", "cl"    : The number of seconds a player can continue talking after dying as if they were still alive
+sv_talk_enemy_dead                       : 0        : , "rep", "cl"    : Dead players can hear all dead enemy communication (voice, chat)
+sv_talk_enemy_living                     : 0        : , "rep", "cl"    : Living players can hear all living enemy communication (voice, chat)
+sv_teamid_overhead                       : 1        : , "nf", "rep", "cl" : Shows teamID over player's heads.  0 = off, 1 = on
+sv_teamid_overhead_always_prohibit       : 0        : , "nf", "rep", "cl" : Determines whether cl_teamid_overhead_always is prohibited.
+sv_teamid_overhead_maxdist               : 0        : , "rep", "cl"    : If >0, server will override cl_teamid_overhead_maxdist
+sv_teamid_overhead_maxdist_spec          : 0        : , "rep", "cl"    : If >0, server will override cl_teamid_overhead_maxdist_spec
+sv_timebetweenducks                      : 0        : , "rep", "cl"    : Minimum time before recognizing consecutive duck key
+sv_turning_inaccuracy_angle_min          : 4        : , "cheat", "rep", "cl" : 
+sv_turning_inaccuracy_decay              : 0        : , "cheat", "rep", "cl" : 
+sv_turning_inaccuracy_enabled            : 0        : , "cheat", "rep", "cl" : 
+sv_ugc_manager_max_new_file_check_interval_secs : 1000     : , "sv"           : 
+sv_unlockedchapters                      : 1        : , "a"            : Highest unlocked game chapter.
+sv_usercmd_custom_random_seed            : 1        : , "sv"           : When enabled server will populate an additional random seed independent of the client
+sv_validate_edict_change_infos           : 0        :                  : Verify that edict changeinfos are being calculated properly (used to debug local network backdoor mode).
+sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
+sv_voice_proximity                       : -1       : , "sv", "rep"    : 
+sv_voice_proximity_minvolume             : 0        : , "rep"          : 
+sv_voice_proximity_positional            : 0        : , "sv", "rep"    : 
+sv_voice_proximity_use_falloff           : 0        : , "rep"          : 
+sv_voicecodec                            : 0        : , "rep"          : Specifies which voice codec DLL to use in a game. Set to the name of the DLL without the extension.
+sv_voiceenable                           : 1        : , "a", "nf"      : 
+sv_vote_allow_in_warmup                  : 0        : , "sv"           : Allow voting during warmup?
+sv_vote_allow_spectators                 : 0        : , "sv"           : Allow spectators to initiate votes?
+sv_vote_command_delay                    : 2        : , "sv"           : How long after a vote passes until the action happens
+sv_vote_count_spectator_votes            : 0        : , "sv"           : Allow spectators to vote on issues?
+sv_vote_creation_timer                   : 120      : , "sv"           : How often someone can individually call a vote.
+sv_vote_disallow_kick_on_match_point     : 0        : , "sv"           : Disallow vote kicking on the match point round.
+sv_vote_failure_timer                    : 300      : , "sv"           : A vote that fails cannot be re-submitted for this long
+sv_vote_issue_kick_allowed               : 1        : , "sv", "nf", "rep" : Can people hold votes to kick players from the server?
+sv_vote_issue_loadbackup_allowed         : 1        : , "sv", "nf", "rep" : Can people hold votes to load match from backup?
+sv_vote_issue_loadbackup_spec_authoritative : 0        : , "sv"           : When enabled, admins load match from backup without players vote
+sv_vote_issue_loadbackup_spec_only       : 0        : , "sv", "nf", "rep" : When enabled, only admins load match from backup
+sv_vote_issue_loadbackup_spec_safe       : 1        : , "sv"           : When enabled, admins load match from backup in safe time of the round only
+sv_vote_issue_pause_match_spec_only      : 0        : , "sv", "nf", "rep" : When enabled, only admins start technical pause
+sv_vote_issue_restart_game_allowed       : 0        : , "sv"           : Can people hold votes to restart the game?
+sv_vote_kick_ban_duration                : 15       : , "sv", "nf", "rep" : How long should a kick vote ban someone from the server? (in minutes)
+sv_vote_quorum_ratio                     : 0        : , "sv"           : The minimum ratio of players needed to vote on an issue to resolve it.
+sv_vote_timer_duration                   : 15       : , "sv"           : How long to allow voting on an issue
+sv_vote_to_changelevel_before_match_point : 0        : , "sv", "rep"    : Restricts vote to change level to rounds prior to match point (default 0, vote is never disallowed)
+sv_walkable_normal                       : 0        : , "rep", "cl"    : 
+sv_water_movespeed_multiplier            : 0        : , "rep", "cl"    : 
+sv_water_swim_mode                       : 0        : , "rep", "cl"    : 
+sv_weapon_encumbrance_per_item           : 0        : , "rep", "cl"    : 
+sv_weapon_encumbrance_scale              : 0        : , "rep", "cl"    : 
+sv_weapon_require_use_grace_period       : 1        : , "sv"           : 
+sv_workshop_allow_other_maps             : 1        : , "sv"           : When hosting a workshop collection, users can play other workshop map on this server when it is empty and then mapcycle into th
+--------------
+335 total convars/sv
