@@ -738,5 +738,96 @@ sv_weapon_encumbrance_per_item           : 0        : , "rep", "cl"    :
 sv_weapon_encumbrance_scale              : 0        : , "rep", "cl"    : 
 sv_weapon_require_use_grace_period       : 1        : , "sv"           : 
 sv_workshop_allow_other_maps             : 1        : , "sv"           : When hosting a workshop collection, users can play other workshop map on this server when it is empty and then mapcycle into th
+cash_player_bomb_defused                 : 200      : , "nf", "rep", "cl" : 
+cash_player_bomb_planted                 : 200      : , "nf", "rep", "cl" : 
+cash_player_damage_hostage               : -30      : , "nf", "rep", "cl" : 
+cash_player_get_killed                   : 0        : , "nf", "rep", "cl" : 
+cash_player_interact_with_hostage        : 300      : , "nf", "rep", "cl" : 
+cash_player_killed_enemy_default         : 200      : , "nf", "rep", "cl" : 
+cash_player_killed_enemy_factor          : 0        : , "nf", "rep", "cl" : 
+cash_player_killed_hostage               : -1000    : , "nf", "rep", "cl" : 
+cash_player_killed_teammate              : -300     : , "nf", "rep", "cl" : 
+cash_player_rescued_hostage              : 1000     : , "nf", "rep", "cl" : 
+cash_player_respawn_amount               : 0        : , "nf", "rep", "cl" : 
+cash_team_elimination_bomb_map           : 2700     : , "nf", "rep", "cl" : 
+cash_team_elimination_hostage_map_ct     : 2300     : , "nf", "rep", "cl" : 
+cash_team_elimination_hostage_map_t      : 2000     : , "nf", "rep", "cl" : 
+cash_team_hostage_alive                  : 0        : , "nf", "rep", "cl" : 
+cash_team_hostage_interaction            : 500      : , "nf", "rep", "cl" : 
+cash_team_loser_bonus                    : 2400     : , "nf", "rep", "cl" : 
+cash_team_loser_bonus_consecutive_rounds : 0        : , "nf", "rep", "cl" : 
+cash_team_planted_bomb_but_defused       : 200      : , "nf", "rep", "cl" : 
+cash_team_rescued_hostage                : 0        : , "nf", "rep", "cl" : 
+cash_team_survive_guardian_wave          : 1000     : , "nf", "rep", "cl" : 
+cash_team_terrorist_win_bomb             : 2700     : , "nf", "rep", "cl" : 
+cash_team_win_by_defusing_bomb           : 2700     : , "nf", "rep", "cl" : 
+cash_team_win_by_hostage_rescue          : 3000     : , "nf", "rep", "cl" : 
+cash_team_win_by_time_running_out_bomb   : 2700     : , "nf", "rep", "cl" : 
+cash_team_win_by_time_running_out_hostage : 2000     : , "nf", "rep", "cl" : 
+cash_team_winner_bonus_consecutive_rounds : 0        : , "nf", "rep", "cl" : 
+mp_autoteambalance                       : 1        : , "sv", "nf"     : 
+mp_buy_anywhere                          : 0        : , "nf", "rep", "cl" : When set, players can buy anywhere, not only in buyzones. 0 = default. 1 = both teams. 2 = Terrorists. 3 = Counter-Terrorists.
+mp_buy_during_immunity                   : 0        : , "nf", "rep", "cl" : When set, players can buy when immune, ignoring buytime. 0 = default. 1 = both teams. 2 = Terrorists. 3 = Counter-Terrorists.
+mp_c4timer                               : 40       : , "nf", "rep", "cl" : how long from when the C4 is armed until it blows
+mp_freezetime                            : 5        : , "sv", "nf", "rep" : how many seconds to keep players frozen when the round starts
+mp_friendlyfire                          : 1        : , "nf", "rep", "cl" : Allows team members to injure other members of their team
+mp_limitteams                            : 2        : , "sv", "nf", "rep" : Max # of players 1 team can have over another (0 disables check)
+mp_maxrounds                             : 15       : , "nf", "rep", "cl" : max number of rounds to play before server changes maps
+mp_roundtime                             : 3        : , "sv", "nf", "rep" : How many minutes each round takes.
+mp_roundtime_defuse                      : 2        : , "sv", "nf", "rep" : How many minutes each round of Bomb Defuse takes. If 0 then use mp_roundtime instead.
+mp_roundtime_hostage                     : 2        : , "sv", "nf", "rep" : How many minutes each round of Hostage Rescue takes. If 0 then use mp_roundtime instead.
+mp_teammates_are_enemies                 : 0        : , "nf", "rep", "cl" : When set, your teammates act as enemies and all players are valid targets.
+mp_timelimit                             : 0        : , "nf", "rep", "cl" : game time per map in minutes
+nextlevel                                : 0        : , "nf", "rep", "cl" : If set to a valid map name, will trigger a changelevel to the specified map at the end of the round
+nextmode                                 : 0        : , "nf", "rep", "cl" : Sets the game mode to be played when the next level loads
+r_AirboatViewDampenDamp                  : 1        : , "cheat", "nf", "rep", "cl" : 
+r_AirboatViewDampenFreq                  : 7        : , "cheat", "nf", "rep", "cl" : 
+r_AirboatViewZHeight                     : 0        : , "cheat", "nf", "rep", "cl" : 
+r_JeepViewDampenDamp                     : 1        : , "cheat", "nf", "rep", "cl" : 
+r_JeepViewDampenFreq                     : 7        : , "cheat", "nf", "rep", "cl" : 
+r_JeepViewZHeight                        : 10       : , "cheat", "nf", "rep", "cl" : 
+r_VehicleViewDampen                      : 1        : , "cheat", "nf", "rep", "cl" : 
+sv_accelerate                            : 5        : , "nf", "rep", "cl" : Linear acceleration amount (old value is 5.6)
+sv_accelerate_debug_speed                : 0        : , "nf", "rep", "cl" : 
+sv_accelerate_use_weapon_speed           : 1        : , "nf", "rep", "cl" : 
+sv_airaccelerate                         : 12       : , "nf", "rep", "cl" : 
+sv_allchat                               : 1        : , "sv", "nf"     : Players can receive all other players' text chat, team restrictions apply
+sv_alltalk                               : 0        : , "nf", "rep", "cl" : Deprecated. Replaced with sv_talk_enemy_dead and sv_talk_enemy_living.
+sv_autobuyammo                           : 0        : , "sv", "nf", "rep" : Enable automatic ammo purchase when inside buy zones during buy periods
+sv_bounce                                : 0        : , "nf", "rep", "cl" : Bounce multiplier for when physically simulated objects collide with other objects.
+sv_cheats                                : 1        : , "nf", "rep"    : Allow cheats on server
+sv_competitive_minspec                   : 1        : , "nf", "rep", "cl" : Enable to force certain client convars to minimum/maximum values to help prevent competitive advantages.
+sv_competitive_official_5v5              : 0        : , "nf", "rep", "cl" : Enable to force the server to show 5v5 scoreboards and allows spectators to see characters through walls.
+sv_contact                               : 0        : , "nf"           : Contact email for server sysop
+sv_deadtalk                              : 0        : , "nf", "rep", "cl" : Dead players can speak (voice, text) to the living
+sv_friction                              : 5        : , "nf", "rep", "cl" : World friction.
+sv_gravity                               : 800      : , "nf", "rep", "cl" : World gravity.
+sv_kick_ban_duration                     : 15       : , "nf", "rep", "cl" : How long should a kick ban from the server should last (in minutes)
+sv_max_allowed_net_graph                 : 1        : , "nf", "rep", "cl" : Determines max allowed net_graph value for clients.
+sv_maxspeed                              : 320      : , "nf", "rep", "cl" : 
+sv_noclipaccelerate                      : 5        : , "a", "nf", "rep", "cl" : 
+sv_noclipspeed                           : 5        : , "a", "nf", "rep", "cl" : 
+sv_password                              : 0        : , "nf", "prot", "norecord" : Server password for entry into multiplayer games
+sv_show_team_equipment_prohibit          : 0        : , "nf", "rep", "cl" : Determines whether +cl_show_team_equipment is prohibited.
+sv_spec_hear                             : 1        : , "nf", "rep", "cl" : Determines who spectators can hear: 0: only spectators; 1: all players; 2: spectated team; 3: self only; 4: nobody
+sv_specaccelerate                        : 5        : , "a", "nf", "rep", "cl" : 
+sv_specnoclip                            : 1        : , "a", "nf", "rep", "cl" : 
+sv_specspeed                             : 3        : , "a", "nf", "rep", "cl" : 
+sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam comm
+sv_stopspeed                             : 80       : , "nf", "rep", "cl" : Minimum stopping speed when on ground.
+sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
+sv_teamid_overhead                       : 1        : , "nf", "rep", "cl" : Shows teamID over player's heads.  0 = off, 1 = on
+sv_teamid_overhead_always_prohibit       : 0        : , "nf", "rep", "cl" : Determines whether cl_teamid_overhead_always is prohibited.
+sv_voiceenable                           : 1        : , "a", "nf"      : 
+sv_vote_issue_kick_allowed               : 1        : , "sv", "nf", "rep" : Can people hold votes to kick players from the server?
+sv_vote_issue_loadbackup_allowed         : 1        : , "sv", "nf", "rep" : Can people hold votes to load match from backup?
+sv_vote_issue_loadbackup_spec_only       : 0        : , "sv", "nf", "rep" : When enabled, only admins load match from backup
+sv_vote_issue_pause_match_spec_only      : 0        : , "sv", "nf", "rep" : When enabled, only admins start technical pause
+sv_vote_kick_ban_duration                : 15       : , "sv", "nf", "rep" : How long should a kick vote ban someone from the server? (in minutes)
+tv_advertise_watchable                   : 0        : , "nf", "prot", "norecord" : GOTV advertises the match as watchable via game UI, clients watching via UI will not need to type password
+tv_enable                                : 0        : , "nf"           : Activates GOTV on server (0=off;1=on;2=on when reserved)
+tv_enable1                               : 0        : , "nf"           : Activates GOTV[1] on server (0=off;1=on;2=on when reserved)
+tv_password                              : 0        : , "nf", "prot", "norecord" : GOTV password for all clients
+tv_relaypassword                         : 0        : , "nf", "prot", "norecord" : GOTV password for relay proxies
 --------------
-738 total convars/sv
+829 total convars/sv
