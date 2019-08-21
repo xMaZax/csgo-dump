@@ -1,5 +1,408 @@
 cvar list
 --------------
+ai_debug_los                             : 0        : , "sv", "cheat"  : NPC Line-Of-Sight debug mode. If 1, solid entities that block NPC LOC will be highlighted with white bounding boxes. If 2, it'l
+ai_drawbattlelines                       : 0        : , "sv", "cheat"  : 
+ai_report_task_timings_on_limit          : 0        : , "a", "sv"      : 
+ai_think_limit_label                     : 0        : , "a", "sv"      : 
+ai_vehicle_avoidance                     : 1        : , "sv", "cheat"  : 
+bot_allow_grenades                       : 1        : , "sv", "rep"    : If nonzero, bots may use grenades.
+bot_allow_machine_guns                   : 1        : , "sv", "rep"    : If nonzero, bots may use the machine gun.
+bot_allow_pistols                        : 1        : , "sv", "rep"    : If nonzero, bots may use pistols.
+bot_allow_rifles                         : 1        : , "sv", "rep"    : If nonzero, bots may use rifles.
+bot_allow_rogues                         : 1        : , "sv", "rep"    : If nonzero, bots may occasionally go 'rogue'. Rogue bots do not obey radio commands, nor pursue scenario goals.
+bot_allow_shotguns                       : 1        : , "sv", "rep"    : If nonzero, bots may use shotguns.
+bot_allow_snipers                        : 1        : , "sv", "rep"    : If nonzero, bots may use sniper rifles.
+bot_allow_sub_machine_guns               : 1        : , "sv", "rep"    : If nonzero, bots may use sub-machine guns.
+bot_chatter                              : 0        : , "sv", "rep"    : Control how bots talk. Allowed values: 'off', 'radio', 'minimal', or 'normal'.
+bot_coop_force_throw_grenade_chance      : 0        : , "sv", "cheat"  : 
+bot_coop_idle_max_vision_distance        : 1400     : , "sv", "cheat", "rep" : Max distance bots can see targets (in coop) when they are idle, dormant, hiding or asleep.
+bot_crouch                               : 0        : , "sv", "cheat"  : 
+bot_debug                                : 0        : , "sv", "cheat", "rep" : For internal testing purposes.
+bot_debug_target                         : 0        : , "sv", "cheat", "rep" : For internal testing purposes.
+bot_defer_to_human_goals                 : 0        : , "sv", "rep"    : If nonzero and there is a human on the team, the bots will not do the scenario tasks.
+bot_defer_to_human_items                 : 1        : , "sv", "rep"    : If nonzero and there is a human on the team, the bots will not get scenario items.
+bot_difficulty                           : 1        : , "sv", "rep"    : Defines the skill of bots joining the game.  Values are: 0=easy, 1=normal, 2=hard, 3=expert.
+bot_dont_shoot                           : 0        : , "sv", "cheat", "rep" : If nonzero, bots will not fire weapons (for debugging).
+bot_freeze                               : 0        : , "sv", "cheat"  : 
+bot_ignore_players                       : 0        : , "sv", "cheat"  : Bots will not see non-bot players.
+bot_join_after_player                    : 1        : , "sv", "rep"    : If nonzero, bots wait until a player joins before entering the game.
+bot_join_team                            : 0        : , "sv", "rep"    : Determines the team bots will join into. Allowed values: 'any', 'T', or 'CT'.
+bot_loadout                              : 0        : , "sv", "cheat"  : bots are given these items at round start
+bot_max_vision_distance_override         : -1       : , "sv", "cheat", "rep" : Max distance bots can see targets.
+bot_mimic                                : 0        : , "sv", "cheat"  : 
+bot_mimic_yaw_offset                     : 180      : , "sv", "cheat"  : 
+bot_quota                                : 10       : , "sv", "rep"    : Determines the total number of bots in the game.
+bot_quota_mode                           : 0        : , "sv", "rep"    : Determines the type of quota. Allowed values: 'normal', 'fill', and 'match'. If 'fill', the server will adjust bots to keep N p
+bot_randombuy                            : 0        : , "sv", "cheat"  : should bots ignore their prefered weapons and just buy weapons at random?
+bot_show_battlefront                     : 0        : , "sv", "cheat"  : Show areas where rushing players will initially meet.
+bot_show_nav                             : 0        : , "sv", "cheat", "rep" : For internal testing purposes.
+bot_show_occupy_time                     : 0        : , "sv", "cheat"  : Show when each nav area can first be reached by each team.
+bot_stop                                 : 0        : , "sv", "cheat", "rep" : If nonzero, immediately stops all bot processing.
+bot_traceview                            : 0        : , "sv", "cheat", "rep" : For internal testing purposes.
+bot_zombie                               : 0        : , "sv", "cheat", "rep" : If nonzero, bots will stay in idle mode and not attack.
+chet_debug_idle                          : 0        : , "a", "sv"      : If set one, many debug prints to help track down the TLK_IDLE issue. Set two for super verbose info
+contributionscore_assist                 : 1        : , "sv"           : amount of contribution score added for an assist
+contributionscore_bomb_defuse_major      : 3        : , "sv"           : amount of contribution score for defusing a bomb while at least one enemy remains alive
+contributionscore_bomb_defuse_minor      : 1        : , "sv"           : amount of contribution score for defusing a bomb after eliminating enemy team
+contributionscore_bomb_exploded          : 1        : , "sv"           : amount of contribution score awarded to bomb planter and terrorists remaining alive if bomb explosion wins the round
+contributionscore_bomb_planted           : 2        : , "sv"           : amount of contribution score for planting a bomb
+contributionscore_cash_bundle            : 0        : , "sv"           : amount of contribution score for picking up a cash bundle
+contributionscore_crate_break            : 0        : , "sv"           : amount of contribution score for breaking an item crate
+contributionscore_hostage_kill           : -2       : , "sv"           : amount of contribution score for killing a hostage, normally negative
+contributionscore_hostage_rescue_major   : 3        : , "sv"           : amount of contribution score added to rescuer per hostage rescued
+contributionscore_hostage_rescue_minor   : 1        : , "sv"           : amount of contribution score added to all alive CTs per hostage rescued
+contributionscore_kill                   : 2        : , "sv"           : amount of contribution score added for a kill
+contributionscore_kill_factor            : 0        : , "sv"           : percentage of victim's contribution score to award to their killer as a bonus
+contributionscore_objective_kill         : 3        : , "sv"           : amount of contribution score added for an objective related kill
+contributionscore_suicide                : -2       : , "sv"           : amount of contribution score for a suicide, normally negative
+contributionscore_team_kill              : -2       : , "sv"           : amount of contribution score for a team kill, normally negative
+cs_enable_player_physics_box             : 0        : , "sv"           : 
+cs_hostage_near_rescue_music_distance    : 2000     : , "sv", "cheat"  : 
+cs_ShowStateTransitions                  : -2       : , "sv", "cheat"  : cs_ShowStateTransitions <ent index or -1 for all>. Show player state transitions.
+CS_WarnFriendlyDamageInterval            : 3        : , "sv", "cheat"  : Defines how frequently the server notifies clients that a player damaged a friend
+custom_bot_difficulty                    : 0        : , "sv", "rep", "cl" : Bot difficulty for offline play.
+debug_visibility_monitor                 : 0        : , "sv", "cheat"  : 
+enable_debug_overlays                    : 1        : , "sv", "cheat"  : Enable rendering of debug overlays
+ent_messages_draw                        : 0        : , "sv", "cheat"  : Visualizes all entity input/output activity.
+fish_dormant                             : 0        : , "sv", "cheat", "rep" : Turns off interactive fish behavior. Fish become immobile and unresponsive.
+fx_new_sparks                            : 1        : , "sv", "cheat"  : Use new style sparks. 
+g_debug_angularsensor                    : 0        : , "sv", "cheat"  : 
+g_debug_constraint_sounds                : 0        : , "sv", "cheat"  : Enable debug printing about constraint sounds.
+g_debug_trackpather                      : 0        : , "sv", "cheat"  : 
+g_debug_vehiclebase                      : 0        : , "sv", "cheat"  : 
+g_debug_vehicledriver                    : 0        : , "sv", "cheat"  : 
+g_debug_vehicleexit                      : 0        : , "sv", "cheat"  : 
+g_debug_vehiclesound                     : 0        : , "sv", "cheat"  : 
+g_jeepexitspeed                          : 100      : , "sv", "cheat"  : 
+game_mode                                : 0        : , "sv", "rep", "cl" : The current game mode (based on game type). See GameModes.txt.
+game_type                                : 0        : , "sv", "rep", "cl" : The current game type. See GameModes.txt.
+global_chatter_info                      : 0        : , "sv"           : Map/mode-specific responserules criteria used by calls to UTIL_GlobalChatter
+global_event_log_enabled                 : 0        : , "sv", "cheat"  : Enables the global event log system
+healthshot_healthboost_damage_multiplier : 1        : , "sv", "rep"    : 
+hostage_debug                            : 0        : , "sv", "cheat"  : Show hostage AI debug information
+hostage_is_silent                        : 0        : , "sv", "cheat"  : When set, the hostage won't play any code driven response rules lines
+hostfile                                 : 0        : , "sv"           : The HOST file to load.
+inferno_child_spawn_interval_multiplier  : 0        : , "sv", "cheat"  : Amount spawn interval increases for each child
+inferno_child_spawn_max_depth            : 4        : , "sv", "rep"    : 
+inferno_damage                           : 40       : , "sv", "cheat"  : Damage per second
+inferno_debug                            : 0        : , "sv", "cheat"  : 
+inferno_flame_lifetime                   : 7        : , "sv", "rep"    : Average lifetime of each flame in seconds
+inferno_flame_spacing                    : 42       : , "sv", "cheat"  : Minimum distance between separate flame spawns
+inferno_forward_reduction_factor         : 0        : , "sv", "cheat"  : 
+inferno_friendly_fire_duration           : 6        : , "sv", "cheat"  : For this long, FF is credited back to the thrower.
+inferno_initial_spawn_interval           : 0        : , "sv", "cheat"  : Time between spawning flames for first fire
+inferno_max_child_spawn_interval         : 0        : , "sv", "cheat"  : Largest time interval for child flame spawning
+inferno_max_flames                       : 16       : , "sv", "rep"    : Maximum number of flames that can be created
+inferno_max_range                        : 150      : , "sv", "rep"    : Maximum distance flames can spread from their initial ignition point
+inferno_per_flame_spawn_duration         : 3        : , "sv", "cheat"  : Duration each new flame will attempt to spawn new flames
+inferno_scorch_decals                    : 1        : , "sv", "cheat"  : 
+inferno_spawn_angle                      : 45       : , "sv", "cheat"  : Angular change from parent
+inferno_surface_offset                   : 20       : , "sv", "cheat"  : 
+inferno_velocity_decay_factor            : 0        : , "sv", "cheat"  : 
+inferno_velocity_factor                  : 0        : , "sv", "cheat"  : 
+inferno_velocity_normal_factor           : 0        : , "sv", "cheat"  : 
+loopsingleplayermaps                     : 0        : , "sv", "cheat", "rep" : 
+motdfile                                 : 0        : , "sv"           : The MOTD file to load.
+mp_autokick                              : 1        : , "sv", "rep"    : Kick idle/team-killing/team-damaging players
+mp_autoteambalance                       : 1        : , "sv", "nf"     : 
+mp_backup_restore_load_autopause         : 1        : , "sv"           : Whether to automatically pause the match after restoring round data from backup
+mp_backup_round_auto                     : 1        : , "sv"           : If enabled will keep in-memory backups to handle reconnecting players even if the backup files aren't written to disk
+mp_backup_round_file                     : 0        : , "sv"           : If set then server will save all played rounds information to files filename_date_time_team1_team2_mapname_roundnum_score1_scor
+mp_backup_round_file_last                : 0        : , "sv"           : Every time a backup file is written the value of this convar gets updated to hold the name of the backup file.
+mp_backup_round_file_pattern             : 0        : , "sv"           : If set then server will save all played rounds information to files named by this pattern, e.g.'%prefix%_%date%_%time%_%team1%_
+mp_competitive_endofmatch_extra_time     : 15       : , "sv"           : After a competitive match finishes rematch voting extra time is given for rankings.
+mp_consecutive_loss_aversion             : 1        : , "sv", "rep"    : How loss streak is affected with round win: 0 = win fully resets loss bonus, 1 = first win steps down loss bonus, 2 = first win
+mp_consecutive_loss_max                  : 4        : , "sv", "rep"    : 
+mp_coopmission_bot_difficulty_offset     : 0        : , "sv", "rep"    : The difficulty offset modifier for bots during coop missions.
+mp_damage_headshot_only                  : 0        : , "sv", "rep"    : Determines whether non-headshot hits do any damage.
+mp_damage_scale_ct_body                  : 1        : , "sv", "rep"    : Scales the damage a CT player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)
+mp_damage_scale_ct_head                  : 1        : , "sv", "rep"    : Scales the damage a CT player takes by this much when they take damage in the head (1 == 100%, 0.5 == 50%).  REMEMBER! headshot
+mp_damage_scale_t_body                   : 1        : , "sv", "rep"    : Scales the damage a T player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)
+mp_damage_scale_t_head                   : 1        : , "sv", "rep"    : Scales the damage a T player takes by this much when they take damage in the head (1 == 100%, 0.5 == 50%).  REMEMBER! headshots
+mp_damage_vampiric_amount                : 0        : , "sv", "rep"    : If Set to non-0, will determine the fraction of damage dealt that will be given to attacker.
+mp_deathcam_skippable                    : 1        : , "sv", "rep"    : Determines whether a player can early-out of the deathcam.
+mp_disconnect_kills_bots                 : 0        : , "sv"           : When a bot disconnects, kill them first.  Requires mp_disconnect_kills_players.
+mp_disconnect_kills_players              : 1        : , "sv"           : When a player disconnects, kill them first (triggering item drops, stats, etc.)
+mp_dm_bonus_length_max                   : 30       : , "sv", "rep"    : Maximum time the bonus time will last (in seconds)
+mp_dm_bonus_length_min                   : 30       : , "sv", "rep"    : Minimum time the bonus time will last (in seconds)
+mp_dm_time_between_bonus_max             : 40       : , "sv", "rep"    : Maximum time a bonus time will start after the round start or after the last bonus (in seconds)
+mp_dm_time_between_bonus_min             : 30       : , "sv", "rep"    : Minimum time a bonus time will start after the round start or after the last bonus (in seconds)
+mp_dogtag_despawn_on_killer_death        : 1        : , "sv", "rep"    : Whether dogtags should despawn when their killer dies
+mp_dogtag_despawn_time                   : 120      : , "sv", "rep"    : How many seconds dogtags should stay around before despawning automatically (0 = infinite)
+mp_dogtag_pickup_rule                    : 0        : , "sv", "rep"    : Who is eligible to pick up a dogtag (0 = killer only, 1 = killer's team, 2 = victim's team, 3 = killer & victim's team, 4 = any
+mp_drop_grenade_enable                   : 0        : , "sv"           : Allows players to drop grenades.
+mp_drop_knife_enable                     : 0        : , "sv"           : Allows players to drop knives.
+mp_endmatch_votenextmap_wargames_modes   : 0        : , "sv"           : Modes available for endmatch voting during War Games. Separate names with spaces.
+mp_endmatch_votenextmap_wargames_nummaps : 3        : , "sv"           : Maximum number of maps to include in endmatch voting during War Games
+mp_endmatch_votenextmap_wargames_nummodes : 1        : , "sv"           : Maximum number of other War Games to include in endmatch voting during War Games
+mp_footsteps_serverside                  : 1        : , "sv"           : Makes the server always play footstep sounds. Clients never calculate footstep sounds locally, instead relying on the server.
+mp_freezetime                            : 6        : , "sv", "nf", "rep" : how many seconds to keep players frozen when the round starts
+mp_global_damage_per_second              : 0        : , "sv", "rep"    : If above 0, deal non-lethal damage to players over time.
+mp_guardian_bot_money_per_wave           : 800      : , "sv", "rep"    : The amount of money bots get time each wave the players complete.  This # is absolute and not additive, the money is set to (th
+mp_guardian_player_dist_max              : 2000     : , "sv", "rep"    : The maximum distance a player is allowed to get from the bombsite before they're killed.
+mp_guardian_player_dist_min              : 1300     : , "sv", "rep"    : The distance at which we start to warn a player when they are too far from the guarded bombsite.
+mp_guardian_special_kills_needed         : 10       : , "sv", "rep"    : The number of kills needed with a specific weapon.
+mp_guardian_special_weapon_needed        : 0        : , "sv", "rep"    : The weapon that needs to be used to increment the kills needed to complete the mission.
+mp_guardian_target_site                  : -1       : , "sv"           : If set to the index of a bombsite, will cause random spawns to be only created near that site.
+mp_hostages_max                          : 2        : , "sv", "rep"    : Maximum number of hostages to spawn.
+mp_hostages_run_speed_modifier           : 1        : , "sv", "rep"    : Default is 1.0, slow down hostages by setting this to < 1.0.
+mp_hostages_spawn_farthest               : 0        : , "sv", "rep"    : When enabled will consistently force the farthest hostages to spawn.
+mp_hostages_spawn_force_positions        : 0        : , "sv", "rep"    : Comma separated list of zero based indices to force spawn positions, e.g. '0,2' or '1,6'
+mp_hostages_spawn_same_every_round       : 1        : , "sv", "rep"    : 0 = spawn hostages randomly every round, 1 = same spawns for entire match.
+mp_humanteam                             : 0        : , "sv", "rep"    : Restricts human players to a single team {any, CT, T}
+mp_ignore_round_win_conditions           : 0        : , "sv", "rep"    : Ignore conditions which would end the current round
+mp_limitteams                            : 2        : , "sv", "nf", "rep" : Max # of players 1 team can have over another (0 disables check)
+mp_logdetail                             : 0        : , "sv"           : Logs attacks.  Values are: 0=off, 1=enemy, 2=teammate, 3=both)
+mp_logdetail_items                       : 0        : , "sv"           : Logs a line any time a player acquires or loses an item.
+mp_logdistance_2d                        : 250      : , "sv"           : Enables distance logging every so many units
+mp_logdistance_sec                       : 15       : , "sv"           : Enables distance logging every so many seconds
+mp_logloadouts                           : 1        : , "sv"           : Enables distance logging with full loadouts
+mp_logmoney                              : 0        : , "sv"           : Enables money logging.  Values are: 0=off, 1=on
+mp_only_cts_rescue_hostages              : 1        : , "sv", "rep"    : 
+mp_require_gun_use_to_acquire            : 0        : , "sv"           : Whether guns must be +used to acquire or default is touch-to-pickup
+mp_restartgame                           : 0        : , "sv"           : If non-zero, game will restart in the specified number of seconds
+mp_roundtime                             : 5        : , "sv", "nf", "rep" : How many minutes each round takes.
+mp_roundtime_defuse                      : 0        : , "sv", "nf", "rep" : How many minutes each round of Bomb Defuse takes. If 0 then use mp_roundtime instead.
+mp_roundtime_deployment                  : 5        : , "sv"           : How many minutes deployment for coop mission takes.
+mp_roundtime_hostage                     : 0        : , "sv", "nf", "rep" : How many minutes each round of Hostage Rescue takes. If 0 then use mp_roundtime instead.
+mp_spawnprotectiontime                   : 5        : , "sv", "rep"    : Kick players who team-kill within this many seconds of a round restart.
+mp_starting_losses                       : 0        : , "sv", "rep"    : Determines what the initial loss streak is.
+mp_suicide_time                          : 5        : , "sv", "cheat", "rep" : Specifies number of seconds required to wait before another suicide.
+mp_tagging_scale                         : 1        : , "sv", "rep"    : Scalar for player tagging modifier when hit. Lower values for greater tagging.
+mp_td_dmgtokick                          : 300      : , "sv", "rep"    : The damage threshhold players have to exceed in a match to get kicked.
+mp_td_dmgtowarn                          : 200      : , "sv", "rep"    : The damage threshhold players have to exceed in a match to get warned that they are about to be kicked.
+mp_td_spawndmgthreshold                  : 50       : , "sv", "rep"    : The damage threshold players have to exceed at the start of the round to be warned/kick.
+mp_team_timeout_max                      : 1        : , "sv", "rep", "cl" : Number of timeouts each team gets per match.
+mp_team_timeout_time                     : 60       : , "sv", "rep", "cl" : Duration of each timeout.
+mp_teamflag_1                            : 0        : , "sv"           : Enter a country's alpha 2 code to show that flag next to team 1's name in the spectator scoreboard.
+mp_teamflag_2                            : 0        : , "sv"           : Enter a country's alpha 2 code to show that flag next to team 2's name in the spectator scoreboard.
+mp_teamlogo_1                            : 0        : , "sv"           : Enter a team's shorthand image name to display their logo. Images can be found here: 'resource/flash/econ/tournaments/teams'
+mp_teamlogo_2                            : 0        : , "sv"           : Enter a team's shorthand image name to display their logo. Images can be found here: 'resource/flash/econ/tournaments/teams'
+mp_teammatchstat_1                       : 0        : , "sv"           : A non-empty string sets first team's match stat.
+mp_teammatchstat_2                       : 0        : , "sv"           : A non-empty string sets second team's match stat.
+mp_teammatchstat_cycletime               : 45       : , "sv"           : Cycle match stats after so many seconds
+mp_teammatchstat_holdtime                : 5        : , "sv"           : Decide on a match stat and hold it additionally for at least so many seconds
+mp_teammatchstat_txt                     : 0        : , "sv"           : A non-empty string sets the match stat description, e.g. 'Match 2 of 3'.
+mp_teamname_1                            : 0        : , "sv"           : A non-empty string overrides the first team's name.
+mp_teamname_2                            : 0        : , "sv"           : A non-empty string overrides the second team's name.
+mp_teamprediction_pct                    : 0        : , "sv"           : A value between 1 and 99 will show predictions in favor of CT team.
+mp_teamprediction_txt                    : 0        : , "sv"           : A value between 1 and 99 will set predictions in favor of first team.
+mp_teamscore_1                           : 0        : , "sv"           : A non-empty string for best-of-N maps won by the first team.
+mp_teamscore_2                           : 0        : , "sv"           : A non-empty string for best-of-N maps won by the second team.
+mp_teamscore_max                         : 0        : , "sv"           : How many maps to win the series (bo3 max=2; bo5 max=3; bo7 max=4)
+mp_tkpunish                              : 0        : , "sv", "rep"    : Will TK'ers and team damagers be punished in the next round?  {0=no,  1=yes}
+mp_weapon_melee_touch_time_after_hit     : 5        : , "sv", "cheat"  : 
+mp_weapon_next_owner_touch_time          : 1        : , "sv", "cheat"  : 
+mp_weapon_prev_owner_touch_time          : 1        : , "sv", "cheat"  : 
+mp_weapon_self_inflict_amount            : 0        : , "sv", "rep"    : If Set to non-0, will hurt the attacker by the specified fraction of max damage if they miss.
+mp_weapons_max_gun_purchases_per_weapon_per_match : -1       : , "sv", "rep", "cl" : Max number of times a player may purchase any weapon per match
+nav_area_bgcolor                         : 753793536.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
+nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
+nav_coplanar_slope_limit                 : 0        : , "sv", "cheat"  : 
+nav_coplanar_slope_limit_displacement    : 0        : , "sv", "cheat"  : 
+nav_corner_adjust_adjacent               : 18       : , "sv", "cheat"  : radius used to raise/lower corners in nearby areas when raising/lowering corners.
+nav_create_area_at_feet                  : 0        : , "sv", "cheat"  : Anchor nav_begin_area Z to editing player's feet
+nav_create_place_on_ground               : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when created by hand.
+nav_debug_blocked                        : 0        : , "sv", "cheat"  : 
+nav_displacement_test                    : 10000    : , "sv", "cheat"  : Checks for nodes embedded in displacements (useful for in-development maps)
+nav_draw_limit                           : 500      : , "sv", "cheat"  : The maximum number of areas to draw in edit mode
+nav_edit                                 : 0        : , "sv", "cheat"  : Set to one to interactively edit the Navigation Mesh. Set to zero to leave edit mode.
+nav_generate_fencetops                   : 1        : , "sv", "cheat"  : Autogenerate nav areas on fence and obstacle tops
+nav_generate_fixup_jump_areas            : 1        : , "sv", "cheat"  : Convert obsolete jump areas into 2-way connections
+nav_generate_incremental_range           : 2000     : , "sv", "cheat"  : 
+nav_generate_incremental_tolerance       : 0        : , "sv", "cheat"  : Z tolerance for adding new nav areas.
+nav_max_view_distance                    : 0        : , "sv", "cheat"  : Maximum range for precomputed nav mesh visibility (0 = default 1500 units)
+nav_max_vis_delta_list_length            : 64       : , "sv", "cheat"  : 
+nav_potentially_visible_dot_tolerance    : 0        : , "sv", "cheat"  : 
+nav_quicksave                            : 0        : , "sv", "cheat"  : Set to one to skip the time consuming phases of the analysis.  Useful for data collection and testing.
+nav_selected_set_border_color            : -840066816.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
+nav_selected_set_color                   : 1378157312.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
+nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
+nav_show_area_info                       : 0        : , "sv", "cheat"  : Duration in seconds to show nav area ID and attributes while editing
+nav_show_compass                         : 0        : , "sv", "cheat"  : 
+nav_show_continguous                     : 0        : , "sv", "cheat"  : Highlight non-contiguous connections
+nav_show_danger                          : 0        : , "sv", "cheat"  : Show current 'danger' levels.
+nav_show_light_intensity                 : 0        : , "sv", "cheat"  : 
+nav_show_node_grid                       : 0        : , "sv", "cheat"  : 
+nav_show_node_id                         : 0        : , "sv", "cheat"  : 
+nav_show_nodes                           : 0        : , "sv", "cheat"  : 
+nav_show_player_counts                   : 0        : , "sv", "cheat"  : Show current player counts in each area.
+nav_show_potentially_visible             : 0        : , "sv", "cheat"  : Show areas that are potentially visible from the current nav area
+nav_slope_limit                          : 0        : , "sv", "cheat"  : The ground unit normal's Z component must be greater than this for nav areas to be generated.
+nav_slope_tolerance                      : 0        : , "sv", "cheat"  : The ground unit normal's Z component must be this close to the nav area's Z component to be generated.
+nav_snap_to_grid                         : 0        : , "sv", "cheat"  : Snap to the nav generation grid when creating new nav areas
+nav_solid_props                          : 0        : , "sv", "cheat"  : Make props solid to nav generation/editing
+nav_split_place_on_ground                : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when split.
+nav_test_node                            : 0        : , "sv", "cheat"  : 
+nav_test_node_crouch                     : 0        : , "sv", "cheat"  : 
+nav_test_node_crouch_dir                 : 4        : , "sv", "cheat"  : 
+nav_update_visibility_on_edit            : 0        : , "sv", "cheat"  : If nonzero editing the mesh will incrementally recompue visibility
+nextmap_print_enabled                    : 0        : , "sv"           : When enabled prints next map to clients
+noclip_fixup                             : 1        : , "sv", "cheat"  : 
+npc_ally_deathmessage                    : 1        : , "sv", "cheat"  : 
+npc_height_adjust                        : 1        : , "a", "sv"      : Enable test mode for ik height adjustment
+occlusion_test_camera_margins            : 12       : , "sv"           : Amount by which the camera (viewer's eye) is expanded for occlusion test. This should be large enough to accommodate eye's move
+occlusion_test_shadow_length             : 144      : , "sv"           : Max length of completely occluded shadow to consider a player for occlusion test. If shadow provably stops at this distance, th
+particle_test_attach_attachment          : 0        : , "sv", "cheat"  : Attachment index for attachment mode
+particle_test_attach_mode                : 0        : , "sv", "cheat"  : Possible Values: 'start_at_attachment', 'follow_attachment', 'start_at_origin', 'follow_origin'
+particle_test_file                       : 0        : , "sv", "cheat"  : Name of the particle system to dynamically spawn
+phys_show_active                         : 0        : , "sv", "cheat"  : 
+player_debug_print_damage                : 0        : , "sv", "cheat"  : When true, print amount and type of all damage received by player to console.
+player_ping_throttle_decay               : 0        : , "sv", "cheat"  : Decay for how fast the ping throttle delay will decay
+pvs_min_player_distance                  : 1500     : , "sv"           : Min distance to player at which PVS is used. At closer distances, PVS assumes we can see a shadow or something else from the pl
+r_JeepFOV                                : 90       : , "sv", "cheat", "rep" : 
+r_vehicleBrakeRate                       : 1        : , "sv", "cheat"  : 
+radarvisdistance                         : 1000     : , "sv", "cheat"  : at this distance and beyond you need to be point right at someone to see them
+radarvismaxdot                           : 0        : , "sv", "cheat"  : how closely you have to point at someone to see them beyond max distance
+radarvismethod                           : 1        : , "sv", "cheat"  : 0 for traditional method, 1 for more realistic method
+radarvispow                              : 0        : , "sv", "cheat"  : the degree to which you can point away from a target, and still see them on radar.
+rr_followup_maxdist                      : 1800     : , "sv", "cheat"  : 'then ANY' or 'then ALL' response followups will be dispatched only to characters within this distance.
+rr_remarkable_max_distance               : 1200     : , "sv", "cheat"  : AIs will not even consider remarkarbles that are more than this many units away.
+rr_remarkable_world_entities_replay_limit : 1        : , "sv", "cheat"  : TLK_REMARKs will be dispatched no more than this many times for any given info_remarkable
+rr_remarkables_enabled                   : 1        : , "sv", "cheat"  : If 1, polling for info_remarkables and issuances of TLK_REMARK is enabled.
+rr_thenany_score_slop                    : 0        : , "sv", "cheat"  : When computing respondents for a 'THEN ANY' rule, all rule-matching scores within this much of the best score will be considere
+scene_showfaceto                         : 0        : , "a", "sv"      : When playing back, show the directions of faceto events.
+scene_showlook                           : 0        : , "a", "sv"      : When playing back, show the directions of look events.
+scene_showmoveto                         : 0        : , "a", "sv"      : When moving, show the end location.
+scene_showunlock                         : 0        : , "a", "sv"      : Show when a vcd is playing but normal AI is running.
+servercfgfile                            : 0        : , "sv"           : 
+showtriggers                             : 0        : , "sv", "cheat"  : Shows trigger brushes
+snd_sos_show_server_xmit                 : 0        : , "sv", "cheat"  : 
+soundscape_debug                         : 0        : , "sv", "cheat"  : When on, draws lines to all env_soundscape entities. Green lines show the active soundscape, red lines show soundscapes that ar
+spec_allow_roaming                       : 0        : , "sv", "cheat", "rep" : If nonzero, allow free-roaming spectator camera.
+spec_freeze_time_lock                    : 1        : , "sv", "rep"    : Time players are prevented from skipping the freeze cam
+spec_replay_bot                          : 0        : , "sv"           : Enable Spectator Hltv Replay when killed by bot
+spec_replay_cam_delay                    : 5        : , "sv"           : Hltv Replay delay in seconds
+spec_replay_cam_options                  : 0        : , "sv"           : Debug options for replay cam
+spec_replay_round_delay                  : 0        : , "sv"           : Round can be delayed by this much due to someone watching a replay; must be at least 3-4 seconds, otherwise the last replay wil
+spec_replay_winddown_time                : 2        : , "sv"           : The trailing time, in seconds, of replay past the event, including fade-out
+suitvolume                               : 0        : , "a", "sv"      : 
+sv_allchat                               : 1        : , "sv", "nf"     : Players can receive all other players' text chat, team restrictions apply
+sv_allow_votes                           : 1        : , "sv"           : Allow voting?
+sv_arms_race_vote_to_restart_disallowed_after : 0        : , "sv", "rep"    : Arms Race gun level after which vote to restart is disallowed
+sv_auto_adjust_bot_difficulty            : 1        : , "sv"           : Adjust the difficulty of bots each round based on contribution score.
+sv_auto_full_alltalk_during_warmup_half_end : 1        : , "sv"           : When enabled will automatically turn on full all talk mode in warmup, at halftime and at the end of the match
+sv_autobuyammo                           : 0        : , "sv", "nf", "rep" : Enable automatic ammo purchase when inside buy zones during buy periods
+sv_bot_buy_decoy_weight                  : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_flash_weight                  : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_grenade_chance                : 33       : , "sv"           : Chance bots will buy a grenade with leftover money (after prim, sec and armor). Input as percent (0-100.0)
+sv_bot_buy_hegrenade_weight              : 6        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_molotov_weight                : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bot_buy_smoke_weight                  : 1        : , "sv"           : Given a bot will buy a grenade, controls the odds of the grenade type. Proportional to all other sv_bot_buy_*_weight convars.
+sv_bots_force_rebuy_every_round          : 0        : , "sv"           : If set, this strips the bots of their weapons every round and forces them to rebuy.
+sv_bots_get_easier_each_win              : 0        : , "sv"           : If > 0, some # of bots will lower thier difficulty each time they win. The argument defines how many will lower their difficult
+sv_bots_get_harder_after_each_wave       : 0        : , "sv"           : If > 0, some # of bots will raise thier difficulty each time CTs beat a Guardian wave. The argument defines how many will raise
+sv_breachcharge_arm_delay                : 0        : , "sv", "cl"     : 
+sv_breachcharge_delay_max                : 0        : , "sv", "cl"     : 
+sv_breachcharge_delay_min                : 0        : , "sv", "cl"     : 
+sv_breachcharge_distance_max             : 1200     : , "sv", "cl"     : 
+sv_breachcharge_distance_min             : 600      : , "sv", "cl"     : 
+sv_breachcharge_fuse_max                 : 1        : , "sv", "cl"     : 
+sv_breachcharge_fuse_min                 : 0        : , "sv", "cl"     : 
+sv_broadcast_ugc_download_progress_interval : 8        : , "sv"           : 
+sv_broadcast_ugc_downloads               : 0        : , "sv"           : 
+sv_bumpmine_arm_delay                    : 0        : , "sv", "cl"     : 
+sv_bumpmine_detonate_delay               : 0        : , "sv", "cl"     : 
+sv_buy_status_override                   : -1       : , "sv", "rep"    : Override for buy status map info. 0 = everyone can buy, 1 = ct only, 2 = t only 3 = nobody
+sv_clockcorrection_msecs                 : 30       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
+sv_ct_spawn_on_bombsite                  : -1       : , "sv"           : Force cts to spawn on a bombsite
+sv_damage_print_enable                   : 1        : , "sv", "rep"    : Turn this off to disable the player's damage feed in the console after getting killed.
+sv_dc_friends_reqd                       : 0        : , "sv"           : Set this to 0 to allow direct connects to a game in progress even if no presents are present
+sv_debug_ugc_downloads                   : 0        : , "sv"           : 
+sv_disable_pas                           : 1        : , "sv", "cheat", "rep" : 
+sv_drowning_damage_initial               : 2        : , "sv", "rep"    : 
+sv_drowning_damage_max                   : 5        : , "sv", "rep"    : 
+sv_dz_autojointeam                       : 1        : , "sv"           : Whether players are automatically assigned a DZ team
+sv_dz_cash_bundle_size                   : 50       : , "sv", "rep"    : Size of a cash bundle
+sv_dz_contractkill_reward                : 10       : , "sv", "rep"    : Cash bundles to award for a successful contract kill
+sv_dz_exploration_payment_amount         : 2        : , "sv", "rep"    : Number of cash bundles to award for exploring a new sector
+sv_dz_exploration_payment_amount_bonus   : 2        : , "sv", "rep"    : Number of BONUS cash bundles to award for exploring (if the player has the item/upgrade)
+sv_dz_jointeam_allowed                   : 0        : , "sv"           : Whether non-server admins are allowed to use the dz_jointeam command
+sv_dz_parachute_reuse                    : 1        : , "sv", "rep"    : 
+sv_dz_player_max_health                  : 120      : , "sv"           : 
+sv_dz_player_spawn_armor                 : 0        : , "sv"           : 
+sv_dz_player_spawn_health                : 120      : , "sv"           : 
+sv_dz_show_enemy_name_scope_range        : 800      : , "sv"           : 
+sv_dz_warmup_tablet                      : 1        : , "sv"           : 
+sv_dz_zone_damage                        : 1        : , "sv", "cheat"  : 
+sv_env_entity_makers_enabled             : 1        : , "sv", "rep"    : 
+sv_force_transmit_ents                   : 0        : , "sv"           : Will transmit all entities to client, regardless of PVS conditions (will still skip based on transmit flags, however).
+sv_force_transmit_players                : 0        : , "sv"           : Will transmit players to all clients regardless of PVS checks.
+sv_guardian_heavy_all                    : 0        : , "sv"           : 
+sv_guardian_heavy_count                  : 0        : , "sv"           : 
+sv_guardian_max_wave_for_heavy           : 0        : , "sv"           : 
+sv_guardian_min_wave_for_heavy           : 0        : , "sv"           : 
+sv_health_approach_enabled               : 0        : , "sv", "rep"    : 
+sv_health_approach_speed                 : 10       : , "sv", "rep"    : 
+sv_hegrenade_damage_multiplier           : 1        : , "sv", "rep"    : 
+sv_hegrenade_radius_multiplier           : 1        : , "sv", "rep"    : 
+sv_ignoregrenaderadio                    : 0        : , "sv"           : Turn off Fire in the hole messages
+sv_kick_players_with_cooldown            : 1        : , "sv", "rep"    : (0: do not kick on insecure servers; 1: kick players with Untrusted status or convicted by Overwatch; 2: kick players with any 
+sv_lagcompensateself                     : 0        : , "sv", "cheat"  : Player can lag compensate themselves.
+sv_lagcompensationforcerestore           : 1        : , "sv", "cheat"  : Don't test validity of a lag comp restore, just do it.
+sv_log_http_record_before_any_listeners  : 0        : , "sv"           : 
+sv_matchend_drops_enabled                : 1        : , "sv"           : Rewards gameplay time is always accumulated for players, but drops at the end of the match can be prevented
+sv_maxunlag                              : 0        : , "sv"           : Maximum lag compensation in seconds
+sv_maxusrcmdprocessticks                 : 16       : , "sv"           : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
+sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv"           : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server 
+sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negat
+sv_occlude_players                       : 1        : , "sv"           : 
+sv_player_parachute_velocity             : -200     : , "sv", "rep"    : 
+sv_prime_accounts_only                   : 0        : , "sv"           : When this setting is enabled only prime users can connect to this game server.
+sv_prop_door_open_speed_scale            : 1        : , "sv", "rep"    : 
+sv_pushaway_hostage_force                : 20000    : , "sv", "cheat", "rep" : How hard the hostage is pushed away from physics objects (falls off with inverse square of distance).
+sv_pushaway_max_hostage_force            : 1000     : , "sv", "cheat", "rep" : Maximum of how hard the hostage is pushed away from physics objects.
+sv_pvsskipanimation                      : 979620864.000 : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
+sv_record_item_time_data                 : 0        : , "sv"           : Turn on recording of per player item time data into the server log.
+sv_regeneration_force_on                 : 0        : , "sv", "cheat"  : Cheat to test regenerative health systems
+sv_remove_old_ugc_downloads              : 1        : , "sv"           : 
+sv_show_voip_indicator_for_enemies       : 0        : , "sv", "rep"    : Makes it so the voip icon is shown over enemies as well as allies when they are talking
+sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show lag compensated hitboxes whenever a player is lag compensated.
+sv_showlagcompensation_duration          : 4        : , "sv", "cheat"  : Duration to show lag-compensated hitboxes
+sv_spawn_afk_bomb_drop_time              : 15       : , "sv", "rep"    : Players that have never moved since they spawned will drop the bomb after this amount of time.
+sv_spawn_rappel_min_duration             : 8        : , "sv", "rep"    : 
+sv_spawn_rappel_min_duration_with_chute  : 2        : , "sv", "rep"    : 
+sv_spec_post_death_additional_time       : 0        : , "sv", "rep"    : 
+sv_ugc_manager_max_new_file_check_interval_secs : 1000     : , "sv"           : 
+sv_usercmd_custom_random_seed            : 1        : , "sv"           : When enabled server will populate an additional random seed independent of the client
+sv_voice_proximity                       : -1       : , "sv", "rep"    : 
+sv_voice_proximity_positional            : 0        : , "sv", "rep"    : 
+sv_vote_allow_in_warmup                  : 0        : , "sv"           : Allow voting during warmup?
+sv_vote_allow_spectators                 : 0        : , "sv"           : Allow spectators to initiate votes?
+sv_vote_command_delay                    : 2        : , "sv"           : How long after a vote passes until the action happens
+sv_vote_count_spectator_votes            : 0        : , "sv"           : Allow spectators to vote on issues?
+sv_vote_creation_timer                   : 120      : , "sv"           : How often someone can individually call a vote.
+sv_vote_disallow_kick_on_match_point     : 0        : , "sv"           : Disallow vote kicking on the match point round.
+sv_vote_failure_timer                    : 300      : , "sv"           : A vote that fails cannot be re-submitted for this long
+sv_vote_issue_kick_allowed               : 1        : , "sv", "nf", "rep" : Can people hold votes to kick players from the server?
+sv_vote_issue_loadbackup_allowed         : 1        : , "sv", "nf", "rep" : Can people hold votes to load match from backup?
+sv_vote_issue_loadbackup_spec_authoritative : 0        : , "sv"           : When enabled, admins load match from backup without players vote
+sv_vote_issue_loadbackup_spec_only       : 0        : , "sv", "nf", "rep" : When enabled, only admins load match from backup
+sv_vote_issue_loadbackup_spec_safe       : 1        : , "sv"           : When enabled, admins load match from backup in safe time of the round only
+sv_vote_issue_pause_match_spec_only      : 0        : , "sv", "nf", "rep" : When enabled, only admins start technical pause
+sv_vote_issue_restart_game_allowed       : 0        : , "sv"           : Can people hold votes to restart the game?
+sv_vote_kick_ban_duration                : 15       : , "sv", "nf", "rep" : How long should a kick vote ban someone from the server? (in minutes)
+sv_vote_quorum_ratio                     : 0        : , "sv"           : The minimum ratio of players needed to vote on an issue to resolve it.
+sv_vote_timer_duration                   : 15       : , "sv"           : How long to allow voting on an issue
+sv_vote_to_changelevel_before_match_point : 0        : , "sv", "rep"    : Restricts vote to change level to rounds prior to match point (default 0, vote is never disallowed)
+sv_weapon_require_use_grace_period       : 1        : , "sv"           : 
+sv_workshop_allow_other_maps             : 1        : , "sv"           : When hosting a workshop collection, users can play other workshop map on this server when it is empty and then mapcycle into th
+tv_allow_autorecording_index             : -1       : , "sv"           : When >=0 restricts autorecording only to the specified TV index
+tv_allow_camera_man_steamid              : 0        : , "sv"           : Allows tournament production cameraman to run csgo.exe -interactivecaster on SteamID 7650123456XXX and be the camera man.
+tv_allow_camera_man_steamid2             : 0        : , "sv"           : Allows tournament production tv cameraman to run csgo.exe -interactivecaster on SteamID 7650123456XXX and be the tv camera man.
+tv_allow_static_shots                    : 1        : , "sv"           : Auto director uses fixed level cameras for shots
+tv_delay                                 : 10       : , "sv"           : GOTV broadcast delay in seconds
+tv_delay1                                : 15       : , "sv"           : GOTV[instance 1] broadcast delay in seconds
+tv_delaymapchange                        : 1        : , "sv"           : Delays map change until broadcast is complete
+tv_relayradio                            : 0        : , "sv"           : Relay team radio commands to TV: 0=off, 1=on
+tv_relaytextchat                         : 1        : , "sv"           : Relay text chat data: 0=off, 1=say, 2=say+say_team
+vis_force                                : 0        : , "sv", "cheat"  : 
+vismon_poll_frequency                    : 0        : , "sv", "cheat"  : 
+vismon_trace_limit                       : 12       : , "sv", "cheat"  : 
+voice_player_speaking_delay_threshold    : 0        : , "sv", "cheat"  : 
+xbox_autothrottle                        : 1        : , "a", "sv"      : 
+xbox_throttlebias                        : 100      : , "a", "sv"      : 
+xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 sv_accelerate                            : 5        : , "nf", "rep", "cl" : Linear acceleration amount (old value is 5.6)
 sv_accelerate_debug_speed                : 0        : , "nf", "rep", "cl" : 
 sv_accelerate_use_weapon_speed           : 1        : , "nf", "rep", "cl" : 
@@ -336,4 +739,4 @@ sv_weapon_encumbrance_scale              : 0        : , "rep", "cl"    :
 sv_weapon_require_use_grace_period       : 1        : , "sv"           : 
 sv_workshop_allow_other_maps             : 1        : , "sv"           : When hosting a workshop collection, users can play other workshop map on this server when it is empty and then mapcycle into th
 --------------
-335 total convars/sv
+738 total convars/sv
