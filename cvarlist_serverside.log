@@ -1,9 +1,3 @@
-Connection to Steam servers successful.
-   Public IP is 185.133.40.31.
-Assigned persistent gameserver Steam ID [G:1:2885321].
-Gameserver logged on to Steam, assigned identity steamid:85568392922924745
-VAC secure mode disabled.
-GC Connection established for server version 1056, instance idx 1
 cvar list
 --------------
 _resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
