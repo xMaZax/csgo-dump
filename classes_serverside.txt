@@ -1,4 +1,4 @@
-// Dump of all classes for "csgo" as at 2020/02/15
+// Dump of all classes for "csgo" as at 2020/03/04
 //
 
 CFireSmoke - _firesmoke
@@ -605,6 +605,7 @@ CWeaponTMP - weapon_tmp
 CWeaponUMP45 - weapon_ump45
 CWeaponUSP - weapon_usp
 CWeaponXM1014 - weapon_xm1014
+CWeaponZoneRepulsor - weapon_zone_repulsor
 CBaseWeaponWorldModel - weaponworldmodel
 CEconWearable - wearable_item
 CBaseAnimating - window_pane
