@@ -123,6 +123,8 @@ bot_traceview                            : 0        : , "sv", "cheat", "rep" : F
 bot_zombie                               : 0        : , "sv", "cheat", "rep" : If nonzero, bots will stay in idle mode and not attack.
 buddha                                   : cmd      :                  : Toggle.  Player takes damage but won't die. (Shows red cross when health is zero)
 budget_toggle_group                      : cmd      :                  : Turn a budget group on/off
+buyammo1                                 : cmd      :                  : 
+buyammo2                                 : cmd      :                  : 
 buyrandom                                : cmd      :                  : Buy random primary and secondary. Primarily for deathmatch where cost is not an issue.
 cache_print                              : cmd      :                  : cache_print [section] Print out contents of cache memory.
 cache_print_lru                          : cmd      :                  : cache_print_lru [section] Print out contents of cache memory.
@@ -234,6 +236,11 @@ demo_strict_validation                   : 0        :                  :
 developer                                : 0        :                  : Set developer message level
 devshots_nextmap                         : cmd      :                  : Used by the devshots system to go to the next map in the devshots maplist.
 differences                              : cmd      :                  : Show all convars which are not at their default values.
+disco_folder                             : 0        :                  : Укажите папку с музыкой без 'sound/'
+disco_model                              : 0        :                  : Модель шара
+disco_rotation                           : 11       :                  : Offset on the Z global vector for the lights.
+disco_volume                             : 90       :                  : Громкость звучания музыки
+disco_zoffset                            : 0        :                  : Offset on the Z global vector for the lights.
 disconnect                               : cmd      :                  : Disconnect game from server.
 disp_list_all_collideable                : cmd      :                  : List all collideable displacements
 display_elapsedtime                      : cmd      :                  : Displays how much time has elapsed since the game started
@@ -296,6 +303,7 @@ explode                                  : cmd      :                  : Kills t
 explodevector                            : cmd      :                  : Kills a player applying an explosive force. Usage: explodevector <player> <x value> <y value> <z value>
 fadein                                   : cmd      :                  : fadein {time r g b}: Fades the screen in from black or from the specified color over the given number of seconds.
 fadeout                                  : cmd      :                  : fadeout {time r g b}: Fades the screen to black or to the specified color over the given number of seconds.
+ff                                       : cmd      :                  : 
 ff_damage_bullet_penetration             : 0        : , "sv", "rep"    : If friendly fire is off, this will scale the penetration power and damage a bullet does when penetrating another friendly playe
 ff_damage_reduction_bullets              : 1        : , "sv", "rep"    : How much to reduce damage done to teammates when shot.  Range is from 0 - 1 (with 1 being damage equal to what is done to an en
 ff_damage_reduction_grenade              : 1        : , "sv", "rep"    : How much to reduce damage done to teammates by a thrown grenade.  Range is from 0 - 1 (with 1 being damage equal to what is don
@@ -361,6 +369,27 @@ healthshot_healthboost_speed_multiplier  : 1        : , "sv", "rep"    :
 healthshot_healthboost_time              : 0        : , "sv", "rep"    : 
 heartbeat                                : cmd      :                  : Force heartbeat of master servers
 help                                     : cmd      :                  : Find help about a convar/concommand.
+hg_antidoubleip                          : 0        :                  : Включает функцию которая предотвращает вход двух игроков с одного ай
+hg_antifakecvar                          : 1        :                  : Включает функцию которая проверяет квары
+hg_backtrack                             : 1        :                  : Исправить подмену тикрейта
+hg_badmove                               : 1        :                  : Некорректные движения игрока
+hg_banmode                               : 1        :                  : 1 - БАН, 2 - Если возможно, только блокировать функцию, 3 - ЛОГИ
+hg_bantime                               : 60       :                  : На какой срок банить читера? [0 - LifeTime]
+hg_bhopblock                             : 1        :                  : Блокировка бхопа
+hg_blocksides                            : 1        :                  : Блокировать +left и +right
+hg_chatlog                               : 1        :                  : Разрешать выводить краткие логи в чат для админов?
+hg_chatlog_flag                          : 0        :                  : Какой нужно иметь флаг чтобы видеть не полные логи в чате? Флаги: abcdefghi
+hg_chatlog_sound                         : 0        :                  : Звук уведомления в чате
+hg_delaycvarcheck                        : 1        :                  : Задержка в секундах для проверки читерских кваров (Чем меньше тем выш
+hg_fixdesync                             : 1        :                  : Исправить рассинхронизацию углов
+hg_mouse                                 : 1        :                  : Проверять синхронизацию мыши
+hg_serverlog                             : 1        :                  : Включает логирование серверу
+hg_stats                                 : 1        :                  : Включить дополнительную статистику об профиле игрока
+hg_traceaim                              : 1        :                  : Включает функцию которая пытается помешать трассировке аима
+hg_traceflash                            : 1        :                  : Включает функцию которая пытается помешать трассировке будучи ослеп
+hg_tracesmoke                            : 1        :                  : Включает функцию которая пытается помешать трассировке через смок
+hg_tracewh                               : 1        :                  : Включает функцию которая пытается помешать трассировке через стены
+hg_untrustedangles                       : 1        :                  : Проверка старых углов у игрока
 hltv_replay_status                       : cmd      :                  : Show Killer Replay status and some statistics, works on listen or dedicated server.
 host_filtered_time_report                : cmd      :                  : Dumps time spent idle in previous frames in ms(dedicated only).
 host_flush_threshold                     : 12       :                  : Memory threshold below which the host should flush caches between server instances
@@ -376,8 +405,13 @@ host_timer_report                        : cmd      :                  : Spew CP
 host_timescale                           : 1        : , "cheat", "rep" : Prescale the clock by this amount.
 host_workshop_collection                 : cmd      :                  : Get the latest version of maps in a workshop collection and host them as a maplist.
 host_workshop_map                        : cmd      :                  : Get the latest version of the map and host it on this server.
+hostage_color                            : 255      :                  : Цвет заложников в rgba. 4 числа, каждое от 0 до 255 через пробел
 hostage_debug                            : 0        : , "sv", "cheat"  : Show hostage AI debug information
+hostage_god                              : 0        :                  : Заложники бессмертны. 1 = да; 0 = нет
+hostage_hp                               : 100      :                  : Здоровье заложников (если hostage_god 0)
 hostage_is_silent                        : 0        : , "sv", "cheat"  : When set, the hostage won't play any code driven response rules lines
+hostage_model                            : 0        :                  : Модель заложников models/...mdl, или оставьте пустым
+hostage_noblock                          : 0        :                  : Сквозь заложников можно проходить
 hostfile                                 : 0        : , "sv"           : The HOST file to load.
 hostip                                   : -1182455808.000 :                  : Host game server ip
 hostname                                 : 0        :                  : Hostname for server.
@@ -424,6 +458,7 @@ killvector                               : cmd      :                  : Kills a
 listid                                   : cmd      :                  : Lists banned users.
 listip                                   : cmd      :                  : List IP addresses on the ban list.
 listissues                               : cmd      :                  : List all the issues that can be voted on.
+listmaps                                 : cmd      :                  : 
 listmodels                               : cmd      :                  : List loaded models.
 listRecentNPCSpeech                      : cmd      :                  : Displays a list of the last 5 lines of speech from NPCs.
 log                                      : cmd      :                  : Enables logging to file, console, and udp < on | off >.
@@ -439,6 +474,18 @@ logaddress_list                          : cmd      :                  : List al
 logaddress_list_http                     : cmd      :                  : List all URIs currently receiving server logs
 logaddress_token_secret                  : 0        :                  : Set a secret string that will be hashed when using logaddress with explicit token hash.
 loopsingleplayermaps                     : 0        : , "sv", "cheat", "rep" : 
+ma_addadmin                              : cmd      :                  : Add admin
+ma_addadminoff                           : cmd      :                  : Add admin off
+ma_bd_connect                            : cmd      :                  : Reload connect bd
+ma_bekap_clear                           : cmd      :                  : Clear bekap
+ma_deladmin                              : cmd      :                  : Del admin
+ma_off_clear                             : cmd      :                  : Clear history
+ma_rehashadm                             : cmd      :                  : Reload SQL admins
+ma_reload                                : cmd      :                  : Reload config and ban reason menu options
+ma_wb_ban                                : cmd      :                  : Ban player by command from web site
+ma_wb_mute                               : cmd      :                  : Mute player by command from web site
+ma_wb_rehashadm                          : cmd      :                  : Reload SQL admins
+ma_wb_unmute                             : cmd      :                  : Un mute player by command from web site
 map                                      : cmd      :                  : Start playing on specified map.
 map_background                           : cmd      :                  : Runs a map as the background to the main menu.
 map_commentary                           : cmd      :                  : Start playing, with commentary, on a specified map.
@@ -523,6 +570,7 @@ mod_combiner_info                        : cmd      :                  : debug s
 mod_DumpWeaponWiewModelCache             : cmd      :                  : Dumps the weapon view model cache contents
 mod_DumpWeaponWorldModelCache            : cmd      :                  : Dumps the weapon world model cache contents
 molotov_throw_detonate_time              : 2        : , "sv", "rep"    : 
+motd                                     : cmd      :                  : 
 motdfile                                 : 0        : , "sv"           : The MOTD file to load.
 mp_afterroundmoney                       : 33333    : , "sv", "rep"    : amount of money awared to every player after each round
 mp_anyone_can_pickup_c4                  : 0        : , "sv", "rep"    : If set, everyone can pick up the c4, not just Ts.
@@ -598,7 +646,7 @@ mp_drop_grenade_enable                   : 0        : , "sv"           : Allows 
 mp_drop_knife_enable                     : 0        : , "sv"           : Allows players to drop knives.
 mp_dump_timers                           : cmd      :                  : Prints round timers to the console for debugging
 mp_economy_reset_rounds                  : 0        : , "sv", "rep"    : Reset all player money every N rounds (0 for never)
-mp_endmatch_votenextleveltime            : 20       : , "sv"           : If mp_endmatch_votenextmap is set, players have this much time to vote on the next map at match end.
+mp_endmatch_votenextleveltime            : 0        : , "sv"           : If mp_endmatch_votenextmap is set, players have this much time to vote on the next map at match end.
 mp_endmatch_votenextmap                  : 0        : , "sv", "rep"    : Whether or not players vote for the next map at the end of the match when the final scoreboard comes up
 mp_endmatch_votenextmap_keepcurrent      : 1        : , "sv", "rep"    : If set, keeps the current map in the list of voting options.  If not set, the current map will not appear in the list of voting
 mp_endmatch_votenextmap_wargames_modes   : 0        : , "sv"           : Modes available for endmatch voting during War Games. Separate names with spaces.
@@ -719,6 +767,7 @@ mp_spec_swapplayersides                  : 0        : , "sv", "rep"    : Toggle 
 mp_spectators_max                        : 10       : , "sv", "rep"    : How many spectators are allowed in a match.
 mp_starting_losses                       : 1        : , "sv", "rep"    : Determines what the initial loss streak is.
 mp_startmoney                            : 33333    : , "sv", "rep"    : amount of money each player gets when they reset
+mp_suicide_penalty                       : 1        : , "sv"           : Punish players for suicides
 mp_suicide_time                          : 5        : , "sv", "cheat", "rep" : Specifies number of seconds required to wait before another suicide.
 mp_swapteams                             : cmd      :                  : Swap the teams and restart the game
 mp_switchteams                           : cmd      :                  : Switch teams and restart the game
@@ -783,7 +832,7 @@ name                                     : 0        : , "a", "user", "print", "s
 nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
 nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
 nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
-nav_area_bgcolor                         : -367130912.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
+nav_area_bgcolor                         : -275630208.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
 nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
 nav_avoid                                : cmd      :                  : Toggles the 'avoid this area when possible' flag used by the AI system.
 nav_begin_area                           : cmd      :                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and 
@@ -875,8 +924,8 @@ nav_select_obstructed_areas              : cmd      :                  : Adds al
 nav_select_overlapping                   : cmd      :                  : Selects nav areas that are overlapping others.
 nav_select_radius                        : cmd      :                  : Adds all areas in a radius to the selection set
 nav_select_stairs                        : cmd      :                  : Adds all stairway areas to the selected set
-nav_selected_set_border_color            : 186541920.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
-nav_selected_set_color                   : -1797849984.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
+nav_selected_set_border_color            : 244471744.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
+nav_selected_set_color                   : -1856320512.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
 nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.
 nav_shift                                : cmd      :                  : Shifts the selected areas by the specified amount
 nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
@@ -951,6 +1000,7 @@ net_threaded_socket_recovery_rate        : 6400     :                  : Number 
 net_threaded_socket_recovery_time        : 60       :                  : Number of seconds over which the threaded socket pump algorithm will fully recover client ratelimit.
 next                                     : 0        : , "cheat"        : Set to 1 to advance to next frame ( when singlestep == 1 )
 nextlevel                                : 0        : , "sv", "nf", "rep" : If set to a valid map name, will trigger a changelevel to the specified map at the end of the round
+nextmap                                  : cmd      :                  : 
 nextmap_print_enabled                    : 0        : , "sv"           : When enabled prints next map to clients
 nextmode                                 : 0        : , "sv", "nf", "rep" : Sets the game mode to be played when the next level loads
 noclip                                   : cmd      :                  : Toggle. Player becomes non-solid and flies.  Optional argument of 0 or 1 to force enable/disable
@@ -1000,6 +1050,7 @@ occlusion_test_jump_margin               : 12       :                  : Amount 
 occlusion_test_margins                   : 36       :                  : Amount by which the player bounding box is expanded for occlusion test. This margin should be large enough to accommodate playe
 occlusion_test_shadow_length             : 144      : , "sv"           : Max length of completely occluded shadow to consider a player for occlusion test. If shadow provably stops at this distance, th
 occlusion_test_shadow_max_distance       : 1500     :                  : Max distance at which to consider shadows for occlusion computations
+oldesp_test                              : 1        :                  : test
 paintsplat_bias                          : 0        : , "cheat", "rep" : Change bias value for computing circle buffer
 paintsplat_max_alpha_noise               : 0        : , "cheat", "rep" : Max noise value of circle alpha
 paintsplat_noise_enabled                 : 1        : , "cheat", "rep" : 
@@ -1111,7 +1162,7 @@ radarvisdistance                         : 1000     : , "sv", "cheat"  : at this
 radarvismaxdot                           : 0        : , "sv", "cheat"  : how closely you have to point at someone to see them beyond max distance
 radarvismethod                           : 1        : , "sv", "cheat"  : 0 for traditional method, 1 for more realistic method
 radarvispow                              : 0        : , "sv", "cheat"  : the degree to which you can point away from a target, and still see them on radar.
-rcon_password                            : 0        : , "norecord"     : remote console password.
+rcon_password                            : 31       : , "norecord"     : remote console password.
 recompute_speed                          : cmd      :                  : Recomputes clock speed (for debugging purposes).
 reload                                   : cmd      :                  : Reload the most recent saved game (add setpos to jump to current view position on reload).
 removeallids                             : cmd      :                  : Remove all user IDs from the ban list.
@@ -1170,12 +1221,60 @@ sk_autoaim_mode                          : 1        : , "a", "sv", "rep" :
 skill                                    : 1        : , "a"            : Game skill level (1-3).
 skip_next_map                            : cmd      :                  : Skips the next map in the map rotation for the server.
 sm                                       : cmd      :                  : SourceMod Menu
+sm_addban                                : cmd      :                  : Add ban client
+sm_addvip                                : cmd      :                  : 
+sm_admin                                 : cmd      :                  : 
+sm_admin_list_mode                       : 1        :                  : Режим отображения админов.
+sm_admin_list_tag                        : 1        :                  : Включить/Выключить отображения тэгов.
+sm_admins                                : cmd      :                  : 
+sm_advadmin_admins                       : 0        :                  : Settings of !admins command, 0 - disable, 1 - show fake online admins, 2 - show true online admins
+sm_advadmin_announce                     : 0        :                  : Join announce, 0 - disable, 1 - simple announce, 2 - announce with country name
+sm_advadmin_invalid                      : 1        :                  : Invalid given item will show for all players just for fun, 0 - disable, 1 - enable
+sm_advadmin_log                          : 1        :                  : Enable logging for plugin, 0 - disable, 1 - enable
+sm_advadmin_sound                        : 0        :                  : Teleport and respawn sound, leave blank to disable. Custom sounds not supported.
+sm_advanced_esp_ctcolor                  : 72       :                  : Determines R G B glow colors for Counter-Terrorists team Format should be 'R G B' (with spaces)
+sm_advanced_esp_default                  : 0        :                  : Set to 1 if admins should automatically be given ESP
+sm_advanced_esp_lifestate                : 0        :                  : Set to 1 if admins should only see esp when dead, 2 to only see esp while alive, 0 dead or alive.
+sm_advanced_esp_model                    : 0        :                  : 0 - Use current model (full body glow), 1 - Use facemask model on head
+sm_advanced_esp_notify                   : 0        :                  : Set to 1 if giving and setting esp should notify the rest of the server.
+sm_advanced_esp_tcolor                   : 144      :                  : Determines R G B glow colors for Terrorists team Format should be 'R G B' (with spaces)
+sm_advanced_esp_team                     : 0        :                  : 0 - Display all teams, 1 - Display enemy, 2 - Display teammates
+sm_advanced_esp_version                  : 13       : , "nf", "norecord" : Advanced Admin ESP
+sm_advanced_shop_version                 : 3        : , "sp", "cheat", "nf", "rep", "norecord" : Shop plugin version
+sm_af_reload                             : cmd      :                  : 
+sm_armour                                : cmd      :                  : Set armour of player
+sm_assists                               : cmd      :                  : Set assists of player
+sm_balance                               : cmd      :                  : Scramble the teams
+sm_ban                                   : cmd      :                  : Ban client steam
+sm_banip                                 : cmd      :                  : Ban client ip
 sm_basepath                              : 0        :                  : SourceMod base path (set via command line)
+sm_beacon                                : cmd      :                  : sm_beacon <#userid|name> [0/1]
+sm_beacon_radius                         : 375      :                  : Sets the radius for beacon's light rings.
+sm_blind                                 : cmd      :                  : sm_blind <#userid|name> [amount] - Leave amount off to reset.
+sm_bot                                   : cmd      :                  : 
+sm_burn                                  : cmd      :                  : sm_burn <#userid|name> [time]
+sm_burn_duration                         : 20       :                  : Sets the default duration of sm_burn and firebomb victims.
+sm_bury                                  : cmd      :                  : Bury a player
+sm_cancelvote                            : cmd      :                  : sm_cancelvote
+sm_cash                                  : cmd      :                  : Set cash of player
+sm_changenextmap                         : cmd      :                  : 
+sm_chat                                  : cmd      :                  : sm_chat <message> - sends message to admins
+sm_chat_mode                             : 1        :                  : Allows player's to send messages to admin chat.
+sm_clearmap                              : cmd      :                  : Deleting all dropped weapons from map
 sm_conhook_start                         : cmd      :                  : 
 sm_conhook_stop                          : cmd      :                  : 
+sm_cookies                               : cmd      :                  : sm_cookies <name> [value]
 sm_corecfgfile                           : 0        :                  : SourceMod core configuration file
+sm_csay                                  : cmd      :                  : sm_csay <message> - sends centered message to all players
+sm_cvar                                  : cmd      :                  : sm_cvar <cvar> [value]
 sm_datetime_format                       : 0        :                  : Default formatting time rules
+sm_deaths                                : cmd      :                  : Set deaths of player
+sm_debug                                 : cmd      :                  : 
 sm_debug_connect                         : 1        :                  : Log Debug information about potential connection issues.
+sm_delvip                                : cmd      :                  : 
+sm_disarm                                : cmd      :                  : Disarming a player
+sm_disco                                 : cmd      :                  : 
+sm_drug                                  : cmd      :                  : sm_drug <#userid|name> [0/1]
 sm_dump_admcache                         : cmd      :                  : Dumps the admin cache for debugging
 sm_dump_classes                          : cmd      :                  : Dumps the class list as a text file
 sm_dump_datamaps                         : cmd      :                  : Dumps the data map list as a text file
@@ -1183,21 +1282,187 @@ sm_dump_handles                          : cmd      :                  : Dumps H
 sm_dump_netprops                         : cmd      :                  : Dumps the networkable property table as a text file
 sm_dump_netprops_xml                     : cmd      :                  : Dumps the networkable property table as an XML file
 sm_dump_teprops                          : cmd      :                  : Dumps tempentity props to a file
+sm_equip                                 : cmd      :                  : Equipping something to a player
+sm_esp                                   : cmd      :                  : 
+sm_execcfg                               : cmd      :                  : sm_execcfg <filename>
+sm_extend                                : cmd      :                  : Extending the map
+sm_firebomb                              : cmd      :                  : sm_firebomb <#userid|name> [0/1]
+sm_firebomb_mode                         : 0        :                  : Who is targetted by the FireBomb? 0 = Target only, 1 = Target's team, 2 = Everyone
+sm_firebomb_radius                       : 600      :                  : Sets the bomb blast radius.
+sm_firebomb_ticks                        : 10       :                  : Sets how long the FireBomb fuse is.
+sm_flood_time                            : 0        :                  : Amount of time allowed between chat messages
+sm_frags                                 : cmd      :                  : Set kills of player
+sm_freeze                                : cmd      :                  : sm_freeze <#userid|name> [time]
+sm_freeze_duration                       : 10       :                  : Sets the default duration for sm_freeze and freezebomb victims
+sm_freezebomb                            : cmd      :                  : sm_freezebomb <#userid|name> [0/1]
+sm_freezebomb_mode                       : 0        :                  : Who is targetted by the freezebomb? 0 = Target only, 1 = Target's team, 2 = Everyone
+sm_freezebomb_radius                     : 600      :                  : Sets the freezebomb blast radius.
+sm_freezebomb_ticks                      : 10       :                  : Sets how long the freezebomb fuse is.
+sm_gag                                   : cmd      :                  : Add gag client
+sm_games                                 : cmd      :                  : Show main menu
+sm_give                                  : cmd      :                  : Give something to a player
+sm_givecredits                           : cmd      :                  : How many credits to give to players
+sm_giveesp                               : cmd      :                  : 
+sm_god                                   : cmd      :                  : Set godmode of player
+sm_godicepoker                           : cmd      :                  : 
+sm_gravity                               : cmd      :                  : sm_gravity <#userid|name> [amount] - Leave amount off to reset. Amount is 0.0 through 5.0
+sm_health                                : cmd      :                  : Set health of player
+sm_helmet                                : cmd      :                  : Set helmet of player
+sm_hp                                    : cmd      :                  : Set health of player
+sm_hsay                                  : cmd      :                  : sm_hsay <message> - sends hint message to all players
 sm_immunity_mode                         : 1        : , "sp"           : Mode for deciding immunity protection
 sm_internal                              : cmd      :                  : 
+sm_items_dump                            : cmd      :                  : 
+sm_kick                                  : cmd      :                  : sm_kick <#userid|name> [reason]
+sm_kills                                 : cmd      :                  : Set kills of player
+sm_knife                                 : cmd      :                  : 
+sm_lvl                                   : cmd      :                  : Opens the statistics menu
+sm_lvl_del                               : cmd      :                  : Resets player stats
+sm_lvl_reload                            : cmd      :                  : Reloads core and module configuration files
+sm_lvl_reset                             : cmd      :                  : Сlearing all data in the database
+sm_map                                   : cmd      :                  : sm_map <map>
+sm_mapend                                : cmd      :                  : 
+sm_maphistory                            : cmd      :                  : Shows the most recent maps played
 sm_maphistory_size                       : 20       :                  : 
+sm_melee                                 : cmd      :                  : Equipping something to a player
 sm_menu_sounds                           : 1        :                  : Sets whether SourceMod menus play trigger sounds
+sm_msay                                  : cmd      :                  : sm_msay <message> - sends message as a menu panel
+sm_mute                                  : cmd      :                  : Add mute client
+sm_mvps                                  : cmd      :                  : Set MVPs of player
+sm_nametag                               : cmd      :                  : 
 sm_nextmap                               : 0        : , "nf"           : 
+sm_nobot                                 : cmd      :                  : 
+sm_noclip                                : cmd      :                  : sm_noclip <#userid|name>
+sm_oldesp                                : cmd      :                  : 
+sm_path                                  : cmd      :                  : 
 sm_print_telist                          : cmd      :                  : Prints the temp entity list
+sm_props                                 : cmd      :                  : 
+sm_psay                                  : cmd      :                  : sm_psay <name or #userid> <message> - sends private message
+sm_rcon                                  : cmd      :                  : sm_rcon <args>
+sm_refresh_vips                          : cmd      :                  : 
 sm_reload_databases                      : cmd      :                  : Reparse database configurations file
 sm_reload_translations                   : cmd      :                  : Reparses all loaded translation files
+sm_reload_vip_cfg                        : cmd      :                  : 
+sm_reloadadmins                          : cmd      :                  : sm_reloadadmins
+sm_rename                                : cmd      :                  : sm_rename <#userid|name>
+sm_resetcvar                             : cmd      :                  : sm_resetcvar <cvar>
+sm_respawn                               : cmd      :                  : Respawn a player
+sm_restartgame                           : cmd      :                  : Restarting the round
+sm_restartround                          : cmd      :                  : Restarting the round
+sm_revote                                : cmd      :                  : 
+sm_rg                                    : cmd      :                  : Restarting the round
+sm_rr                                    : cmd      :                  : Restarting the round
+sm_saveloc                               : cmd      :                  : Saving position for teleport
+sm_say                                   : cmd      :                  : sm_say <message> - sends message to all players
+sm_sc                                    : cmd      :                  : Spawning a chicken
+sm_scores                                : cmd      :                  : Set scores of player
+sm_scramble                              : cmd      :                  : Scramble the teams
+sm_seed                                  : cmd      :                  : 
+sm_setcredits                            : cmd      :                  : How many credits to set to players
+sm_settings                              : cmd      :                  : 
+sm_shop                                  : cmd      :                  : Open up main menu
+sm_shop_admin_flags                      : 0        :                  : Set flags for admin panel access. Set several flags if necessary. Ex: 'abcz'
+sm_shop_category_items_hideamount        : 0        :                  : Hide amount of items in category
+sm_shop_clear_db                         : cmd      :                  : Clears database
+sm_shop_doublejump_duration              : 86400    :                  : Длительность двойного прыжка в секундах.
+sm_shop_doublejump_price                 : 1000     :                  : Стоимость покупки двойного прыжка.
+sm_shop_doublejump_sellprice             : 800      :                  : Стоимость продажи двойного прыжка.
+sm_shop_item_transfer_credits            : 500      :                  : How many credits an item transfer cost. Set -1 to disable the feature
+sm_shop_luck_chance                      : 20       :                  : How many chance the luck can be succeded
+sm_shop_luck_credits                     : 500      :                  : How many credits the luck cost
+sm_shop_shield_duration                  : 86400    :                  : Длительность щита в секундах.
+sm_shop_shield_price                     : 1000     :                  : Стоимость покупки щита.
+sm_shop_shield_sellprice                 : 800      :                  : Стоимость продажи щита.
+sm_shop_start_credits                    : 0        :                  : Start credits for a new player
+sm_shop_timer_method                     : 0        :                  : Timing method to use for timed items. 0 time while using and 1 is real time
+sm_shop_trans_credits                    : 0        :                  : Use % to make the transfer to cost the commision or without % to make it cost as the cvar set or -1 to disable this feature
 sm_show_activity                         : 13       : , "sp"           : Activity display setting (see sourcemod.cfg)
+sm_silence                               : cmd      :                  : Add silence client
+sm_slap                                  : cmd      :                  : sm_slap <#userid|name> [damage]
+sm_slay                                  : cmd      :                  : sm_slay <#userid|name>
+sm_spawnchicken                          : cmd      :                  : Spawning a chicken
+sm_spec                                  : cmd      :                  : Set player to spectator
+sm_speed                                 : cmd      :                  : Set speed of player
+sm_store                                 : cmd      :                  : Open up main menu
+sm_swap                                  : cmd      :                  : Swap team of player
+sm_takecredits                           : cmd      :                  : How many credits to take from players
+sm_team                                  : cmd      :                  : Set team of player
+sm_teamscores                            : cmd      :                  : Set team scores
+sm_teleport                              : cmd      :                  : Teleporting a player
+sm_third                                 : cmd      :                  : Toggle thirdperson
+sm_thirdperson                           : cmd      :                  : Toggle thirdperson
+sm_thirdperson_admins                    : 1        : , "ss_added"     : Allow admins to toggle thirdperson to players?
+sm_thirdperson_enabled                   : 1        : , "ss_added"     : Thirdperson's enabled?
+sm_thirdperson_version                   : 1        : , "nf", "norecord", "ss_added" : Thirdperson's version
 sm_time_adjustment                       : 0        :                  : Adjusts the server time in seconds
+sm_timebomb                              : cmd      :                  : sm_timebomb <#userid|name> [0/1]
+sm_timebomb_mode                         : 0        :                  : Who is killed by the timebomb? 0 = Target only, 1 = Target's team, 2 = Everyone
+sm_timebomb_radius                       : 600      :                  : Sets the bomb blast radius.
+sm_timebomb_ticks                        : 10       :                  : Sets how long the timebomb fuse is.
+sm_timeleft_interval                     : 0        :                  : Display timeleft every x seconds. Default 0.
+sm_tp                                    : cmd      :                  : Teleporting a player
+sm_trigger_show                          : 0        :                  : Display triggers message to all players? (0 off, 1 on, def. 0)
+sm_tsay                                  : cmd      :                  : sm_tsay [color] <message> - sends top-left message to all players
+sm_unban                                 : cmd      :                  : Un ban client
+sm_unbury                                : cmd      :                  : Unbury a player
+sm_ungag                                 : cmd      :                  : Un gag client
+sm_unmute                                : cmd      :                  : Un mute client
+sm_unsilence                             : cmd      :                  : Un silence client
+sm_valid_weapons                         : cmd      :                  : Showing the valid weapon names
+sm_vip                                   : cmd      :                  : 
+sm_vip_admin_flag                        : 0        :                  : Флаг админа, необходимый чтобы иметь доступ к управлению VIP-игроками.
+sm_vip_auto_open_menu                    : 0        :                  : Автоматически открывать VIP-меню при входе (0 - Выключено, 1 - Включено)
+sm_vip_core_version                      : 3        : , "sp", "cheat", "nf", "rep", "norecord" : VIP-CORE VERSION
+sm_vip_delete_expired                    : 1        :                  : Удалять VIP-игроков у которых истек срок (-1 - Не удалять, 0 - Удалять сраз�
+sm_vip_delete_outdated                   : -1       :                  : Удалять VIP-игроков которые не заходили на сервер X дней (-1 - Не удалять, 
+sm_vip_features_default_status           : 1        :                  : Статус функций по-умолчанию (0 - Выключены, 1 - Включены)
+sm_vip_hide_no_access_items              : 0        :                  : Режим отображения недоступных функций в вип меню (0 - Сделать пункты н�
+sm_vip_logs_enable                       : 1        :                  : Вести ли лог logs/VIP_Logs.log (0 - Выключено, 1 - Включено)
+sm_vip_menu_commands                     : 0        :                  : Команды для вызова VIP-меню (разделять ;)
+sm_vip_server_id                         : 0        :                  : ID сервера при приспользовании MySQL базы данных
+sm_vip_spawn_delay                       : 1        :                  : Задержка перед установкой привилегий при возрождении игрока
+sm_vip_time_mode                         : 0        :                  : Формат времени (0 - Секунды, 1 - Минуты, 2 - Часы, 3 - Дни)
+sm_vip_update_name                       : 1        :                  : Обновлять имена VIP-игроков в базе данных при входе(0 - Выключено, 1 - Вкл�
+sm_vipadmin                              : cmd      :                  : 
+sm_vipmenu                               : cmd      :                  : 
+sm_vote                                  : cmd      :                  : sm_vote <question> [Answer1] [Answer2] ... [Answer5]
+sm_vote_alltalk                          : 0        :                  : percent required for successful alltalk vote.
+sm_vote_ban                              : 0        :                  : percent required for successful ban vote.
+sm_vote_burn                             : 0        :                  : percent required for successful burn vote.
 sm_vote_delay                            : 30       :                  : Sets the recommended time in between public votes
+sm_vote_ff                               : 0        :                  : percent required for successful friendly fire vote.
+sm_vote_gravity                          : 0        :                  : percent required for successful gravity vote.
+sm_vote_kick                             : 0        :                  : percent required for successful kick vote.
+sm_vote_map                              : 0        :                  : percent required for successful map vote.
 sm_vote_progress_chat                    : 0        :                  : Show current vote progress as chat messages
 sm_vote_progress_client_console          : 0        :                  : Show current vote progress as console messages to clients
 sm_vote_progress_console                 : 0        :                  : Show current vote progress as console messages
 sm_vote_progress_hintbox                 : 0        :                  : Show current vote progress in a hint box
+sm_vote_slay                             : 0        :                  : percent required for successful slay vote.
+sm_votealltalk                           : cmd      :                  : sm_votealltalk
+sm_voteban                               : cmd      :                  : sm_voteban <player> [reason]
+sm_voteburn                              : cmd      :                  : sm_voteburn <player>
+sm_voteff                                : cmd      :                  : sm_voteff
+sm_votegravity                           : cmd      :                  : sm_votegravity <amount> [amount2] ... [amount5]
+sm_votekick                              : cmd      :                  : sm_votekick <player> [reason]
+sm_votemap                               : cmd      :                  : sm_votemap <mapname> [mapname2] ... [mapname5] 
+sm_voteslay                              : cmd      :                  : sm_voteslay <player>
+sm_votestart                             : cmd      :                  : 
+sm_weapons_chat_prefix                   : 0        :                  : Prefix for chat messages
+sm_weapons_db_connection                 : 0        :                  : Database connection name in databases.cfg to use
+sm_weapons_enable_float                  : 1        :                  : Enable/Disable weapon float options
+sm_weapons_enable_nametag                : 1        :                  : Enable/Disable name tag options
+sm_weapons_enable_overwrite              : 0        :                  : Enable/Disable players overwriting other players' weapons (picked up from the ground) by using !ws command
+sm_weapons_enable_seed                   : 1        :                  : Enable/Disable Seed options
+sm_weapons_enable_stattrak               : 1        :                  : Enable/Disable StatTrak options
+sm_weapons_float_increment_size          : 0        :                  : Increase/Decrease by value for weapon float
+sm_weapons_grace_period                  : 0        :                  : Grace period in terms of seconds counted after round start for allowing the use of !ws command. 0 means no restrictions
+sm_weapons_inactive_days                 : 30       :                  : Number of days before a player (SteamID) is marked as inactive and his data is deleted. (0 or any negative value to disable del
+sm_weapons_knife_stattrak_mode           : 0        :                  : 0: All knives show the same StatTrak counter (total knife kills) 1: Each type of knife shows its own separate StatTrak counter
+sm_weapons_table_prefix                  : 0        :                  : Prefix for database table (example: 'xyz_')
+sm_who                                   : cmd      :                  : sm_who [#userid|name]
+sm_ws                                    : cmd      :                  : 
+sm_wslang                                : cmd      :                  : 
 snd_foliage_db_loss                      : 4        : , "cheat"        : foliage dB loss per 1200 units
 snd_gain                                 : 1        : , "cheat"        : 
 snd_gain_max                             : 1        : , "cheat"        : 
@@ -1322,6 +1587,7 @@ sv_dumpstringtables                      : 0        : , "cheat"        :
 sv_duplicate_playernames_ok              : 0        : , "rep"          : When enabled player names won't have the (#) in front of their names its the same as another player.
 sv_dz_autojointeam                       : 1        : , "sv"           : Whether players are automatically assigned a DZ team
 sv_dz_cash_bundle_size                   : 50       : , "sv", "rep"    : Size of a cash bundle
+sv_dz_cash_mega_bundle_size              : 13       : , "sv", "rep"    : Size of a mega cash bundle
 sv_dz_contractkill_reward                : 10       : , "sv", "rep"    : Cash bundles to award for a successful contract kill
 sv_dz_enable_respawn                     : 1        : , "sv", "rep"    : 
 sv_dz_enable_respawn_solos               : 0        : , "sv", "rep"    : 
@@ -1436,7 +1702,7 @@ sv_max_queries_tracked_ips_prune         : 10       :                  : Window 
 sv_max_queries_window                    : 30       :                  : Window over which to average queries per second averages.
 sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
 sv_maxspeed                              : 320      : , "sv", "nf", "rep" : 
-sv_maxunlag                              : 0        : , "sv"           : Maximum lag compensation in seconds
+sv_maxunlag                              : 1        : , "sv"           : Maximum lag compensation in seconds
 sv_maxupdaterate                         : 128      : , "rep"          : Maximum updates per second that the server will allow
 sv_maxuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime exceeds this number of hours, the server will exit.
 sv_maxusrcmdprocessticks                 : 16       : , "sv"           : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
@@ -1695,6 +1961,7 @@ vehicle_flushscript                      : cmd      :                  : Flush a
 version                                  : cmd      :                  : Print version info string.
 view_punch_decay                         : 18       : , "sv", "cheat", "rep" : Decay factor exponent for view punch
 view_recoil_tracking                     : 0        : , "sv", "cheat", "rep" : How closely the view tracks with the aim punch from weapon recoil
+vip                                      : cmd      :                  : 
 vis_force                                : 0        : , "sv", "cheat"  : 
 vismon_poll_frequency                    : 0        : , "sv", "cheat"  : 
 vismon_trace_limit                       : 12       : , "sv", "cheat"  : 
@@ -1774,4 +2041,4 @@ xbox_autothrottle                        : 1        : , "a", "sv"      :
 xbox_throttlebias                        : 100      : , "a", "sv"      : 
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 --------------
-1773 total convars/concommands
+2040 total convars/concommands
