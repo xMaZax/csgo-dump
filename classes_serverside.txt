@@ -1,4 +1,4 @@
-// Dump of all classes for "csgo" as at 2020/03/04
+// Dump of all classes for "csgo" as at 2020/10/26
 //
 
 CFireSmoke - _firesmoke
